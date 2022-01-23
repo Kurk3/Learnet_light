@@ -2,6 +2,7 @@ from flask import Flask
 
 
 def create_app():
+
     app = Flask(__name__)
 
     from src.after_login.after_login_routes import views
