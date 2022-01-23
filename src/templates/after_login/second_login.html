@@ -1,0 +1,37 @@
+{% extends "base_templates/new_home.html" %} {% block title %}Home{% endblock %} {% block content %}
+
+
+    <h1 class="specific_heading_lectures">Prihlásenie sa do výsledkov.</h1>
+    <line></line>
+
+    <div class="div_in_second_login">
+        <form method="POST">
+            <br>
+            <div class="div_second_login">
+                <label for="name" class="label_for_second_login">Name</label>
+                <input
+                        type="text"
+                        class="input_for_second_login"
+                        id="name"
+                        name="name"
+                        placeholder="Enter name"/>
+                <br><br/>
+                <label for="password" class="label_for_second_login">Password</label>
+
+                <input
+                        type="password"
+                        class="input_for_second_login"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"/>
+                <br></br>
+                <button type="submit" class="button_second_login">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+  <p class="text-center">Copyright &copy; learnet.com</p>
+ </footer>
+
+{% endblock %}

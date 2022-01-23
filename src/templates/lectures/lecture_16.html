@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fyzická vrstva </title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Fyzická vrstva</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+
+        <p><span class="high">Fyzická vrstva</span> je najnižšia vrstva. Táto vrstva poskytuje mechanické, elektrické a iné funkčné pomôcky, ktoré
+            sú
+            k dispozícii na aktiváciu alebo <span class="high">deaktiváciu</span>, udržiavajú a prenášajú bity o fyzických spojeniach. Môžu to byť
+            napríklad elektrické signály, optické signály (optické vlákno, laser), <span class="high">elektromagnetické vlny</span> (bezdrôtové
+            siete)
+            alebo zvuk. Použité techniky sa nazývajú technický prenosový proces. Zariadenia a sieťové komponenty, ktoré
+            sú
+            spojené s fyzickou vrstvou, napríklad anténa a zosilňovač, zásuvka pre sieťový kábel, opakovač, zdvih,
+            transceiver, <span class="high">T-bar a terminátor</span>.</p>
+
+        <p>Jeho digitálny prenos bitov na fyzickej vrstve sa uskutočňuje po drôtovej alebo bezkáblovej prenosovej ceste.
+            Zdieľanie prenosového média sa môže uskutočniť na tejto vrstve statickým multiplexovaním. To si vyžaduje
+            nielen
+            špecifikácie určitých <span class="high">prenosových médií</span> (napríklad medený kábel, kábel z optických vlákien, elektrická sieť)
+            a
+            definíciu konektorov a ďalších prvkov. Ďalej je potrebné na tejto úrovni vyriešiť, akým spôsobom sa má
+            prenášať
+            jeden bit.</p>
+
+        <p>To znamená nasledovné: V <span class="high">počítačových sieťach</span> sa dnes informácie vo všeobecnosti prenášajú vo forme <span class="high">sekvencií
+            bitov alebo symbolov</span>. V medených kábloch a rádiovom prenose sú však modulované vysokofrekvenčné
+            elektromagnetické vlny, nosič informácií, v optickom vlnovode svetelné vlny určitej alebo inej vlnovej
+            dĺžky.
+            <span class="high">Nosič</span> informácie nepozná žiadne bitové reťazce, ale môže nadobudnúť oveľa viac rôznych stavov ako len 0
+            alebo 1.
+            Pre každý typ prenosu musí byť preto definované kódovanie. Je to kvôli špecifikácii <span class="high">fyzickej vrstvy</span>
+            siete.</p>
+
+        <p>Typický hardvér na tejto vrstve: <span class="high">repeatre, rozbočovače, káble, a sieťové zasuvky</span></p>
+
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=uSFkqxlqbjg"> • Fyzická vrstva TCP/IP</a></br>
+            <a href="https://www.youtube.com/watch?v=lsky_bgZoKA"> • Fyzická vrstva v ISO</a></br>
+
+        </div>
+    </div>
+
+
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCP/IP vs ISO and Paket</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">TCP/IP vs ISO a Prenos Paketov</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+        <h4> Rozdiel medzi TCP IP a ISO a ako funguje prenos paketov.</h4>
+
+        <h2>OSI vs TCP/IP</h2>
+        <p><span class="high">TCP/IP</span> je komunikačný protokol, ktorý umožňuje <span class="high">hostiteľom</span>
+            pripojiť sa k internetu. Vzťahuje sa na protokol
+            riadenia prenosu používaný v <span class="high">aplikáciách na internete</span>. Na rozdiel od <span
+                    class="high">OSI</span> umožňuje odľahčenie pravidiel tým
+            padom
+            je menej naročný na požiadavky na prenos.</p>
+        <h2>Prenos paketov</h2>
+        <p>Vo vrstvenom systéme si zariadenia vo vrstve vymieňajú údaje v inom formáte, ktorý sa nazýva protocol data
+            unit
+            (<span class="high">PDU</span>). Napríklad, keď chceme na počítači prehliadať <span class="high">webovú stránku</span>,
+            softvér
+            vzdialeného servera najprv
+            odovzdá
+            požadované údaje aplikačnej vrstve. Spracováva sa vrstva po vrstve, pričom každá vrstva vykonáva svoje
+            priradené
+            funkcie. <span class="high">Údaje</span> sa potom prenášajú cez <span class="high">fyzickú vrstvu</span>
+            siete, kým ich neprijme <span class="high">cieľový server</span> alebo iné
+            zariadenie. Údaje sú znova smerované cez <span class="high">vrstvy</span>, pričom každá vrstva vykonáva
+            svoje priradené operácie, kým
+            prijímajúci softvér údaje nepoužije.</p>
+
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1EjycEzqJtKxYOVhkODeyMPdqmXasxOUw" alt="Model image in css">
+        </div>
+
+
+        <p>Počas prenosu každá vrstva pridáva hlavičku do <span class="high">PDU</span> z hornej vrstvy, ktorá riadi a
+            identifikuje paket. Tento
+            proces sa nazýva <span class="high">enkapsulácia</span>. Hlavička a údaje spolu tvoria<span class="high"> PDU</span>
+            pre ďalšiu
+            vrstvu. Proces pokračuje do
+            fyzickej vrstvy alebo sieťovej vrstvy, kde sa dáta prenášajú do prijímača. Prijímač obráti proces a rozbalí
+            údaje na každej vrstve s informáciami v <span class="high">hlavičke</span>. Potom aplikácia konečne použije
+            dáta. Tento proces
+            pokračuje až do odoslania a prijatia všetkých údajov.
+        </p>
+
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1zO1QnPN-bRkJhXEYjkAnbKh0n6wH-pX1">
+        </div>
+
+        <p>Pomocou <span class="high">TCP/IP</span> dokážeme rýchlo pochopiť, ako je nadviazané celé spojenie, a pomocou
+            <span class="high">ISO</span> ho môžeme rozobrať
+            kúsok po kúsku a podrobne <span class="high">analyzovať</span>. To sa často stáva, keď môžeme počúvať a
+            zachytávať <span class="high">špecifickú sieťovú
+                prevádzku</span>. Preto by sme sa mali oboznámiť s oboma <span class="high">referenčnými modelmi</span>
+            a čo najlepšie im porozumieť a
+            osvojiť si ich.
+        </p>
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=rYodcvhh7b8"> • Prenos paketu </a>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+</body>
+</html>

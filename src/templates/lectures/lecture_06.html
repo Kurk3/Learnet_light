@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCP/IP Model</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">TCP/IP Model</h1>
+<line></line>
+
+<div class="container">
+
+    <div class="main">
+        <h4>Úvod do toho, čo je referenčných modelov a typy referenčných modelov</h4>
+
+        <p><span class="high">TCP/IP</span> model je tiež vrstvený referenčný model, často označovaný ako Internet
+            Protocol Suite. Termín <span class="high"> TCP/IP</span>
+            znamená dva protokoly Transmission Control Protocol (<span class="high">TCP</span>) a Internet Protocol
+            (<span class="high">IP</span>).</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Vrstva</th>
+                    <th class="table_header ">Funkcia</th>
+
+
+                </tr>
+                <tr>
+                    <td class="table_heading">4. Aplikáčná vrsta</td>
+                    <td class="text_table">Aplikačná vrstva umožňuje aplikáciám prístup k
+                        službám iných vrstiev a definuje
+                        protokoly, ktoré dané aplikácie používajú na výmenu údajov.
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td class="table_heading">3.Transportná vrstva</td>
+                    <td class="text_table">Transportná vrstva je zodpovedná
+                        za poskytovanie (TCP) relácie a (UDP)
+                        datagramových služieb pre aplikačnú vrstvu.
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td class="table_heading">2. Internetová vrstva</td>
+                    <td class="text_table">Internetová vrstva je zodpovedná za funkcie
+                        adresovania hostiteľa, balenia a smerovania.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="table_heading">1.Linková vrstva</td>
+                    <td class="text_table">Linková vrstva je zodpovedná za umiestnenie TCP/IP paketov na sieťové
+                        médium
+                        a prijímanie
+                        zodpovedajúcich paketov zo sieťového média. TCP/IP je navrhnutý tak, aby fungoval nezávisle
+                        od
+                        metódy prístupu k sieti, formátu rámca a média.
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <p> S <span class="high">TCP/IP</span> môže každá aplikácia prenášať, vymieňať si dáta cez akúkoľvek sieť a nezáleží na tom, kde sa
+            prijímač
+            nachádza.<span class="high"> IP</span> zabezpečuje, že<span class="high"> dátový paket</span> dosiahne svoj cieľ a<span class="high"> TCP</span> riadi prenos dát a zabezpečuje spojenie
+            medzi
+                dátovým tokom a aplikáciou. Hlavným rozdielom medzi <span class="high">TCP/IP</span> a <span class="high">OSI</span> je počet vrstiev, z ktorých niektoré boli
+            kombinované.</p>
+
+        <h2>Najdôležitejšie úlohy TCP/IP sú:</h2>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">úloha</th>
+                    <th class="table_header ">protokol</th>
+                    <th class="table_header ">popis</th>
+
+                </tr>
+                <tr>
+                    <td class="table_heading">Logické
+                        adresovanie
+                    </td>
+                    <td class="table_heading">IP
+                    </td>
+                    <td class="text_table">Kvôli mnohým hostom v rôznych sieťach je potrebné štruktúrovať topológiu
+                        siete a logické adresovanie. V rámci TCP / IP IP preberá logické adresovanie sietí a uzlov.
+                        Dátové pakety sa dostanú do siete len tam, kde majú byť. Spôsoby, ako to urobiť, sú sieťové
+                        triedy, podsiete a CIDR.
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td class="table_heading">Routing</td>
+                    <td class="table_heading">IP</td>
+                    <td class="text_table">Pre každý dátový paket je určený nasledujúci uzol v každom uzle na ceste od
+                        odosielateľa k prijímatelovi. Týmto spôsobom je dátový paket smerovaný k svojmu prijimatelovi,
+                        aj keď jeho umiestnenie nie je odosielateľovi známe.
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td class="table_heading">Kontrola
+                        Toku chýb
+                    </td>
+                    <td class="table_heading">TCP</td>
+                    <td class="text_table">Odosielateľ a príjemca sú často vo vzájomnom kontakte prostredníctvom
+                        virtuálneho spojenia. Preto sa neustále odosielajú kontrolné správy, aby sa skontrolovalo, či je
+                        spojenie stále nadviazané.
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="table_heading">Podpora
+                        Aplikácii
+                    </td>
+                    <td class="table_heading">TCP
+                    </td>
+                    <td class="text_table">
+                        Porty TCP a UDP tvoria softvérovú abstrakciu na rozlíšenie konkrétnych aplikácií a ich
+                        komunikačných spojení.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table_heading">DNS Rozlišovanie
+                    </td>
+                    <td class="table_heading">DNS
+                    </td>
+                    <td class="text_table">
+                        DNS poskytuje rozlíšenie názvov prostredníctvom plne kvalifikovaných názvov domén (FQDN) v IP
+                        adresách, čo nám umožňuje dosiahnuť požadovaného hostiteľa so zadaním nejakého nazvu do URL v
+                        prehliadači
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+<div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=OTwp3xtd4dg"> • TCP/IP Model </a>
+        </div>
+
+    </div>
+
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+</body>
+</html>

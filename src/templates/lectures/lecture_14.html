@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Základné sieťové komponenty</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Základné sieťové komponenty</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+        <h2>Server</h2>
+
+        <p>Server je <span class="high">počítač</span>, ktorý poskytuje údaje iným počítačom a používateľom. Sieťové
+            komponenty môžu byť vo forme
+            počítača, hardvérového zariadenia alebo počítačového programu, ktorý je načítaný tak, aby mohol odosielať
+            údaje
+            a akékoľvek informácie do iných počítačov.</p>
+
+        <p>Pojem „server“ sa zvyčajne vzťahuje na <span class="high">počítačový systém</span>, ktorý prijíma požiadavku
+            na webový dokument a
+            odosiela
+            informácie o požiadavke klientovi.</p>
+
+
+        <h5>• Súborové servery</h5>
+        <h5>• Aplikačné servery</h5>
+        <h5>• webové servery</h5>
+        <h5>• Databázové servery</h5>
+        <h5>• Virtuálne servery</h5>
+        <h5>• Proxy servery</h5>
+        <h5>• DNS servery</h5>
+        <h5>• Monitorovacie a riadiace servery</h5>
+        <h5>• atd</h5>
+
+
+        <h2>Klient</h2>
+
+        <p>Zariadenie, ktoré prijíma požiadavky a odpovede zo servera, sa nazýva<span class="high"> klient</span>. Keď
+            <span class="high">server</span> a jeho klienti
+            spolupracujú na počítači, nazývame to sieť <span class="high">klient/server</span>.</p>
+
+        <h2>Prenosové médiá</h2>
+
+        <p>Prenosové médiá sú média, cez ktoré sa v sieti prenášajú údaje z jedného zariadenia do druhého. Prenosové
+            médium
+            môže byť použité buď vo <span class="high">fyzickom prenosovom médiu</span> alebo <span class="high">bezdrôtovom prenosovom médiu</span>.
+            Fyzické prenosové
+            médium
+            zahŕňa použitie drôtov a káblov, ako sú káble z <span class="high">optických vlákien</span>, koaxiálny kábel
+            atď. Bezdrôtové prenosové
+            médium zahŕňa použitie neriadených médií, ako sú infračervené vlny, elektromagnetické vlny, mikrovlny
+            atď.</p>
+
+        <h2>NIC (Sieťová karta)</h2>
+
+        <p>Karty sieťového rozhrania (NIC) sa tiež nazývajú <span class="high">riadič sieťového rozhrania</span>,
+            sieťový adaptér, adaptér LAN a
+            fyzické sieťové rozhranie. <span class="high">NIC</span> karty sú hardvérové komponenty používané na
+            prepojenie počítačov so sieťami.
+            Bez
+            NIC nemožno počítač pripojiť k sieti</p>
+
+        <p>Je inštalovaný na doske s plošnými spojmi počítača, ktorá poskytuje sieťové pripojenie k počítaču. Vzhľadom
+            na
+            popularitu a nízku cenu <span class="high">ethernetových štandardov</span> je sieťové rozhranie takmer vo
+            všetkých nových počítačoch
+            zabudované priamo do základnej dosky.</p>
+
+        <h3>Typy NIC:</h3>
+
+        <h5>Interná sieťová karta (káblová NIC)</h5>
+
+        <p>V interných sieťových kartách má základná doska slot pre sieťovú kartu, do ktorej sa dá vložiť. Na
+            zabezpečenie
+            prístupu k sieti je potrebný sieťový kábel. Existujú dva typy interných sieťových kariet. Prvý typ používa
+            pripojenia <span class="high">Peripheral Component Interconnect</span> (<span class="high">PCI</span>),
+            zatiaľ čo druhý typ používa architektúru Industry
+            Standard
+            Architecture (ISA).</p>
+
+        <h5>Externá sieťová karta (bezdrôtová NIC)</h5>
+
+        <p>Externú <span class="high">NIC</span> používajú stolné počítače a notebooky, pretože nemajú internú <span
+                class="high">NIC</span>. Externé sieťové karty sú dvoch
+            typov: bezdrôtové a založené na USB. Bezdrôtové sieťové karty je potrebné vložiť do základnej dosky.
+            Rozhranie
+            USB sa používa na pripojenie k notebooku pri cestovaní alebo pri prístupe k bezdrôtovým signálom.</p>
+
+
+        <h2>Hub</h2>
+
+        <p>Hub je zariadenie, ktoré rozdeľuje sieťové pripojenie medzi viacero počítačov. Funguje to podobne ako
+            distribučné centrum. Keď počítač požaduje informácie z jednej siete alebo z konkrétneho počítača, odošle
+            požiadavku do hub/rozbočovača cez kábel. <span class="high">Hub</span> potom prijme túto požiadavku a odošle
+            ju do celej siete.</p>
+
+        <p>Potom každý počítač skontroluje, či mu táto sieť patrí alebo nie. Ak patrí, vysiela, ak žiadosť nepatrí, bude
+            zrušená.</p>
+
+        <p>Takéto <span class="high">sieťové komponenty</span> sa už ale nepouživajú, sú nahradené pokročilejšími
+            komunikačnými zariadeniami, ako
+            sú
+            routery a switche.</p>
+
+        <p><span class="high">Hub</span> sa používa na pripojenie viacerých pripojení, ktoré pochádzajú z rôznych
+            vetiev. Napríklad konektor v
+            <span class="high">hviezdicovej topológii</span>, používa sa na pripojenie rôznych staníc a na <span
+                    class="high">prístup k údajom</span>.</p>
+
+        <h2>Switch</h2>
+
+        <p>switch je komponent, ktorý pomáha zariadeniam prepojiť siete, aby mohli prenášať údaje do iných pripojených
+            zariadení. Tieto sieťové prepínače sú identické so sieťovými <span class="high">hubmi</span>, ale switch má
+            pokročilejšie funkcie ako
+            hub.</p>
+
+        <p>Pokročilé funkcie <span class="high">switcha</span> znamenajú že najprv skontroluje prichádzajúci paket a
+            určí jeho zdroj, cieľovú
+            adresu
+            a trasy, potom odošle údaje do správneho cieľa podľa daného paketu. <span
+                    class="high">Sieťový prepínač</span> sa tiež nazýva
+            Switching
+            hub, Bridging hub a MAC bridge.</p>
+
+        <h2>Router</h2>
+
+        <p>router je hardvérový sieťový komponent. <span class="high">Smerovače</span> fungujú na sieťovej vrstve <span
+                class="high">referenčného modelu OSI</span> (Open
+            system interconnection) a využívajú ich na odosielanie paketov cez sieť pomocou logickej adresy.</p>
+
+        <p>Akékoľvek dáta, ktoré putujú z jednej siete do druhej ako <span class="high">paket</span>. <span
+                class="high">Smerovač</span> prijme takéto paketové dáta a po
+            analýze skrytých informácií v <span class="high">dátovom pakete</span> ich pošle do cieľového zariadenia.
+            Toto sieťové zariadenie sa
+            používa na pripojenie rôznych sietí, či už <span class="high">káblových</span> alebo <span class="high">bezdrôtových</span>.
+        </p>
+
+        <p>Tieto siete sú v dome vnímané hlavne ako Wi-Fi, z ktorej má ktokoľvek prístup na internet.</p>
+
+        <h3>Typy Routerov</h3>
+
+        <p>Existujú dva hlavné typy routerov:</p>
+
+        <h5>Širokopásmové routery</h5>
+
+        <p>Širokopásmový router sa používa na pripojenie počítačov k internetu. Tí, ktorí potrebujú pripojiť svoj
+            telefón k
+            internetu prostredníctvom technológie Voice Over IP. Musíte použiť širokopásmový router. Tieto modemy tiež
+            zahŕňajú Ethernet a Phone Jack.</p>
+
+        <h5>Bezdrôtový routery</h5>
+
+        <p>Bezdrôtový router je veľmi populárny a užitočný. Používajú sa skôro všade Tento router robí internetové
+            pripojenie bezdrôtovým, z ktorého môže ktokoľvek využívať internet prostredníctvom bezdrôtového signálu.</p>
+
+
+        <h2>Modem</h2>
+
+        <p>Úplná forma modemu je „Modulátor/Demodulátor“. Proces konverzie digitálneho signálu na analógový signál sa
+            nazýva <span class="high">modulácia</span>. Tieto komponenty umožňujú počítačovému zariadeniu, ako je napríklad <span class="high">router</span> alebo <span class="high">switch</span>,
+            pripojiť sa k internetu.</p>
+
+        <p>Prevádza alebo „moduluje“ analógový signál z telefónneho alebo káblového kábla na digitálny signál, ktorý
+            môže
+            router alebo switch ľahko rozpoznať.</p>
+
+        <p>Podobne, keď konvertuje odchádzajúce <span class="high">digitálne dáta</span> na <span class="high">analógový signál</span> v počítačovom zariadení, takáto
+            konverzia sa nazýva <span class="high">demodulácia</span>. Rýchlosť prenosu dát cez modem je modifikovateľná. Táto rýchlosť prenosu sa
+            meria v bajtoch za sekundu (bps). Čím vyššia je jeho rýchlosť, tým rýchlejšie môže človek odosielať a
+            prijímať
+            informácie.</p>
+
+        <h5>Typy Modemov</h5>
+
+        <p>V zásade existujú tri typy modemov:</p>
+
+        <h5>Externý modem</h5>
+        <p>K sériovému portu počítača sa pripája káblom umiestneným mimo počítača. Ďalší vodič spája modem s telefónnou
+            linkou.</p>
+
+        <h5>Interný modem</h5>
+        <p>Tento systém je zásuvná doska plošných spojov umiestnená v jednotke. Tento modem je pripojený k telefónnej
+            linke
+            telefónnym káblom.</p>
+
+        <h5>Bezdrôtový modem</h5>
+        <p>Ako už názov napovedá, nepotrebuje žiadny drôt. Vysiela a prijíma signály vzduchom.</p>
+
+        <h2>Repeater</h2>
+
+        <p>Repeater je výkonný sieťový komponent, ktorý sa používa na regeneráciu signálov. Vďaka tomu je signál na dlhú
+            dobu fixovaný, takže sila signálu zostáva stabilná.</p>
+
+        <p><span class="high">Repeater</span> preberá dátové signály z komunikačného média a zosilňuje ich a posiela späť na komunikačné médium.
+            Keď
+            signál zoslabne, toto zariadenie skopíruje signál kúsok po kúsku a potom ho regeneruje na pôvodnú silu, aby
+            bolo
+            internetové pripojenie stabilné.</p>
+
+        <p><span class="high">Repeater</span> je umiestnený v prvej vrstve <span class="high">(fyzickej vrstve) vrstvy OSI</span>. Opakovače sa používajú v kábloch, ktoré
+            musia prekonať vzdialenosti až 100 metrov. Tieto komponenty prijímajú signály z káblov, ako sú optické
+            vlákna,
+            koaxiálne káble a medené káble.</p>
+
+        <h2>Mosty/Bridges</h2>
+
+        <p>Tento most je zariadenie, ktoré má takú funkcionalitu, že filtruje obsah, pre ktorý načítava <span class="high">MAC adresy</span>
+            zdroja
+            aj cieľa. Most spája dve siete <span class="high">LAN</span> (Local Area Network) pomocou rovnakého protokolu. Toto zariadenie pracuje
+            vo
+            vrstve dátového spojenia modelu OSI.</p>
+
+        <p>Tieto sieťové komponenty sú veľmi užitočné na <span class="high">filtrovanie dátovej záťaže prevádzky</span>, pre ktorú ich rozdeľujú
+            na
+            segmenty alebo pakety. Most riadi <span class="high">dátovú prevádzku</span> sietí LAN alebo iných sietí. Tieto mosty sú v skutočnosti
+            pasívne zariadenia, pretože neexistuje žiadna interakcia medzi premostenými a cestami premostenia.</p>
+
+        <h2>Gateway/Brána</h2>
+
+        <p>Brána je <span class="high">hardvérové zariadenie</span>, ktoré funguje ako „<span class="high">brána</span>“ v rámci dvoch sietí. Môže to byť aj router, brána
+            firewall, server alebo akékoľvek iné zariadenie, ktoré umožňuje tok prenosu do a zo siete. Brány sa
+            používajú na
+            prepojenie sietí založených na rôznych protokoloch. Ako sa most používa na spojenie dvoch podobných typov
+            sietí,
+            podobne sa brána používa na spojenie dvoch rozdielnych sietí.</p>
+
+        <p>Tento uzol brány sa nachádza na <span class="high">okraji siete</span> a cez neho pretekajú všetky dáta, ktoré vstupujú do siete alebo
+            vystupujú zo siete. Okrem toho môže tiež prekladať prijaté dáta, ktoré sú prijaté z vonkajších sietí, do
+            formátu
+            alebo <span class="high">protokolu</span>, ktorý je možné <span class="high">identifikovať</span> zariadeniami vo vnútornej sieti.</p>
+
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=gVrXLq5E-CQ"> • Zakladné sieťové komponenty </a>
+        </div>
+    </div>
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

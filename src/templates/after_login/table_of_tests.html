@@ -1,0 +1,31 @@
+{% extends "base_templates/new_home.html" %} {% block title %}Home{% endblock %} {% block content %}
+
+    <p class="main_heading_home_page">Vysledky</p>
+    <p class="underheading_homepage"> Vysledky z testu </p>
+    <line></line>
+
+    <div class="div_in_test">
+        <table>
+            <thead>
+            <tr> <!-- Hlavicka-->
+                <th>MENO</th>
+                <th>TEST</th>
+            </tr>
+
+            </thead>
+            <tbody>
+
+            {% for user_info,user_test_info in zip(data,tests) %}
+                <tr>
+                    <td>  {{ user_info.first_name }} </td>
+                    <td>  {{ user_test_info.test }} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    <br>
+
+
+{% endblock %}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <title>Test</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/tests'>Test</a></li>
+        <li><a href='/'>Domov</a></li>
+        <li><a href='/vysledky'>Výsledky</a></li>
+        <li><a href='/logout'>Odhlásenie</a></li>
+    </ul>
+</nav>
+<div>
+    <p class="main_heading_home_page">Test</p>
+    <line></line>
+
+    <div class="div_test">
+        <form method="POST">
+            <div class="div_test_question">
+                <p class="question_number">Otazka I : </p>
+                <p class="question_text">V ktorej vrstve operuje sieťový komponent HUB?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question1" name="question1" value="answer1"/>
+                    <label for="question1">Vrstva relácie</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question1_0" name="question1" value="answer2"/>
+                    <label for="question1_0">Fyzická vrstva</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question1_1" name="question1" value="answer3"/>
+                    <label for="question1_1">Vrstva dátového spojenia</label>
+                </p>
+                <br>
+            </div>
+
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka II : </p>
+                <p class="question_text">Aká dlhá je IPv6 adresa?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question2" name="question2" value="answer1"/>
+                    <label for="question2">32 bitov</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question2_1" name="question2" value="answer2"/>
+                    <label for="question2_1">128 bitov </label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question2_2" name="question2" value="answer3"/>
+                    <label for="question2_2">64 bitov</label>
+                </p>
+                <br>
+            </div>
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka III : </p>
+                <p class="question_text">Aký druh prekladu sieťových adries možno použiť na to,
+                    aby jedna adresa IP umožnila mnohým používateľom pripojiť sa k internetu?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question3" name="question3" value="answer1"/>
+                    <label for="question3">NAT (network address translation)</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question3_1" name="question3" value="answer2"/>
+                    <label for="question3_1">Statický</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question3_2" name="question3" value="answer3"/>
+                    <label for="question3_2">PAT</label>
+                </p>
+                <br>
+            </div>
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka IV : </p>
+                <p class="question_text">Ktorá z nasledujúcich možností je platným rozsahom hostov pre podsieť,
+                    v ktorej sa nachádza adresa IP 192.168.168.188 255.255.255.192?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question4" name="question4" value="answer1"/>
+                    <label for="question4">192.168.168.129-190</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question4_1" name="question4" value="answer3"/>
+                    <label for="question4_1">192.168.168.128-190</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question4_2" name="question4" value="answer3"/>
+                    <label for="question4_2">192.168.168.129-191</label>
+                </p>
+                <br>
+            </div>
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka V : </p>
+                <p class="question_text">Aký protokol používa PPP na identifikáciu protokolu sieťovej vrstvy?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question5" name="question5" value="answer1"/>
+                    <label for="question5">NCP</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question5_1" name="question5" value="answer2"/>
+                    <label for="question5_1">ISDN</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question5_2" name="question5" value="answer3"/>
+                    <label for="question5_2">HDLC</label>
+                </p>
+                <br>
+            </div>
+
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka VI : </p>
+                <p class="question_text">Ktorá z nasledujúcich adries je súkromná IP adresa?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question6" name="question6" value="answer1"/>
+                    <label for="question6">12.0.0.1</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question6_1" name="question6" value="answer2"/>
+                    <label for="question6_1">192.168.24.43</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question6_2" name="question6" value="answer3"/>
+                    <label for="question6_2">172.15.14.36</label>
+                </p>
+                <br>
+            </div>
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka VII : </p>
+                <p class="question_text">Ktoré funkcie najlepšie popisujú funkcie routera?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question7" name="question7" value="answer1"/>
+                    <label for="question7">Prepínanie paketov, Filtrovanie,</label> <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question7_1" name="question7" value="answer2"/>
+                    <label for="question7_1">Internetová komunikácia, Nasmerovanie</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question7_2" name="question7" value="answer3"/>
+                    <label for="question7_2">Všetky vyššie uvedené</label>
+                </p>
+                <br>
+            </div>
+
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka VIII : </p>
+                <p class="question_text">Čo robí VLAN?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question8" name="question8" value="answer1"/>
+                    <label for="question8">Funguje ako najrýchlejší port pre všetky servery.</label>
+                    <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question8_1" name="question8" value="answer2"/>
+                    <label for="question8_1">Poskytuje viacero kolíznych domén na jednom porte prepínača.</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question8_2" name="question8" value="answer3"/>
+                    <label for="question8_2">Rozdeľuje broadcast domény v prepínacej sieti vrstvy 2.</label>
+                </p>
+                <br>
+            </div>
+
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka IX : </p>
+                <p class="question_text">Aký je hlavný dôvod vytvorenia modelu OSI?</p>
+                <!-- totok center biela farba vacsie pismo -->
+                <p>
+                    <input type="radio" id="question9" name="question9" value="answer2"/>
+                    <label for="question9">Aby rôzne siete mohli medzi sebou komunikovať. #</label>
+                    <!-- toto zmenit na kompletku -->
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question9_1" name="question9" value="answer1"/>
+                    <label for="question9_1">Ulahčený vývoj webových aplikacií.</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question9_2" name="question9" value="answer3"/>
+                    <label for="question9_2">CISCO chcelo mat vlastný model.</label>
+                </p>
+                <br>
+            </div>
+
+
+            <div class="div_test_question">
+                <p class="question_number">Otazka X : </p>
+                <p class="question_text">Ktorá trieda adries IP má predvolene k dispozícii najviac adries pre
+                    hostov?</p>
+                <p>
+                    <input type="radio" id="question10_0" name="question10" value="answer1"/>
+                    <label for="question10_0">A</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question10_1" name="question10" value="answer2"/>
+                    <label for="question10_1"> B</label>
+                </p>
+                <br>
+                <p>
+                    <input type="radio" id="question10_2" name="question10" value="answer3"/>
+                    <label for="question10_2">C</label>
+                </p>
+                <br>
+
+
+            </div>
+
+            <div class="center-page">
+                <button class="button_test" type="submit" value="Submit">Vyhodnotenie</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "base_templates/new_home.html" %} {% block title %}Test{% endblock %} {% block content %}
+
+
+    <br>
+    <p class="main_heading_home_page">Test</p>
+    <p class="underheading_homepage"></p>
+    <line></line>
+
+    <div class="div_text_container_lectures">
+
+        <p class="text_in_container_lectures">Po absolvovaní a dôkladnom naštudovaní všetkých lekcii, ktoré sa nachádzajú
+            na tejto stránke si môžte spustiť test. Test obsahuje 10 ľahkých a stredne náročných otázok. Po spusteného testu sa váš
+            výsledok automaticky ukladá, a preto neopúšťajte stránku po spustení testu. Test obsahuje aj otázky, ktoré si
+            treba vyhľadať. Čiže používať internet je povolené.
+        </p>
+
+
+        <form>
+            <div class="form-group">
+                <button formaction="/test1">Prejsť do testu</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protokoly</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Protokoly</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+
+        <p>V sieti je protokol súbor pravidiel pre formátovanie a spracovanie údajov. Sieťové protokoly sú ako spoločný
+            jazyk pre počítače. Počítače v sieti môžu používať úplne odlišný <span class="high">softvér a hardvér</span>.
+            použitie protokolov im však
+            umožňuje vzájomnú komunikáciu bez ohľadu na to.</p>
+
+        <p>Štandardizované protokoly sú ako spoločný jazyk, ktorý môžu používať počítače, podobne ako dvaja ľudia z
+            rôznych
+            častí sveta nemusia rozumieť svojim rodným jazykom, ale môžu tiež využívať nejaký spoločný jazyk. Ak jeden
+            počítač používate internetový protokol (<span class="high">IP</span>) druhý počítač tiež budú medzi sebou
+            mocť komunikovať. Ale ak jeden
+            počítač používa <span class="high">IP</span> a druhý ho nepozná komunikácia nebude možná.</p>
+
+        <p>Na internete existujú rôzne protokoly pre rôzne typy procesov. Protokoly sú často diskutované z hľadiska
+            toho,
+            do ktorej modelovej vrstvy <span class="high">OSI</span> patria.</p>
+
+        <h2>Protokoly v OSI</h2>
+
+        <p>Model OSI (<span class="high">Open Systems Interconnection</span>) je abstraktnou reprezentáciou toho, ako
+            funguje internet. Obsahuje 7
+            vrstiev, pričom každá vrstva predstavuje inú kategóriu sieťových funkcií.</p>
+
+
+        <p><span class="high">Protokoly</span> umožňujú tieto sieťové funkcie. Internetový protokol (IP) je napríklad
+            zodpovedný za smerovanie údajov
+            tým, že uvádza, odkiaľ pochádzajú dátové pakety a aký je ich cieľ. IP umožňuje komunikáciu medzi sieťami.
+            Preto
+            sa IP považuje za protokol sieťovej vrstvy (vrstva 3).</p>
+
+        <p>Ako ďalší príklad, <span class="high">Transmission Control Protocol (TCP)</span> zaisťuje, že prenos paketov
+            dát cez siete prebieha
+            hladko. Preto sa TCP považuje za protokol transportnej vrstvy (vrstva 4).</p>
+
+        <h2>Ktoré protokoly bežia na sieťovej vrstve?</h2>
+
+        <p>Ako je uvedené vyššie, IP je protokol sieťovej vrstvy zodpovedný za smerovanie. Nie je to však jediný
+            protokol
+            sieťovej vrstvy.</p>
+
+        <p><span class="high">IPsec</span>: Zabezpečenie internetového protokolu (<span class="high">IPsec</span>)
+            nastavuje šifrované, overené pripojenia IP cez virtuálnu
+            privátnu sieť (<span class="high">VPN</span>). Technicky IPsec nie je protokol, ale skôr súbor protokolov,
+            ktorý zahŕňa Encapsulating
+            Security Protocol (<span class="high">ESP</span>), Authentication Header (<span class="high">AH</span>) a
+            Security Associations (SA).</p>
+
+        <p>ICMP: <span class="high">Protokol ICMP</span> (<span class="high">Internet Control Message Protocol</span>)
+            hlási chyby a poskytuje aktualizácie stavu. Napríklad,
+            ak router nedokáže doručiť paket, pošle ICMP správu späť do zdroja paketu.</p>
+
+        <p>IGMP: Protokol <span class="high">IGMP</span> (<span class="high">Internet Group Management Protocol</span>)
+            nastavuje sieťové pripojenia typu one-to-many. IGMP
+            pomáha nastaviť <span class="high">multicasting</span>, čo znamená, že viac počítačov môže prijímať <span class="high">dátové pakety</span> smerované na jednu
+            IP
+            adresu.</p>
+
+        <h2>Internetové protokoly</h2>
+
+        <p><span class="high">TCP</span>: Ako je uvedené vyššie, TCP je protokol transportnej vrstvy, ktorý zabezpečuje spoľahlivé doručovanie
+            údajov. TCP je určený na použitie s IP. Tieto dva protokoly sa často spoločne označujú ako TCP/IP.</p>
+
+        <p><span class="high">HTTP</span>: Hypertext Transfer Protocol (HTTP) je základom <span class="high">World Wide Web</span>, internetu, s ktorým komunikuje väčšina
+            používateľov. Používa sa na prenos údajov medzi zariadeniami. <span class="high">HTTP</span> patrí do aplikačnej vrstvy (vrstva 7),
+            pretože vkladá údaje do formátu, ktorý môžu aplikácie (napr. prehliadač) používať priamo bez ďalšej
+            <span class="high">interpretácie</span>. Spodné vrstvy modelu <span class="high">OSI</span> má na starosti operačný systém počítača, nie aplikácie.</p>
+
+        <p><span class="high">HTTPS</span>: Problém s HTTP je, že nie je zašifrovaný — každý útočník, ktorý zachytí správu HTTP, si ju môže
+            prečítať.
+           <span class="high"> HTTPS </span>(HTTP Secure) to opravuje šifrovaním správ HTTP.</p>
+
+        <p><span class="high">TLS/SSL</span>: Transport Layer Security (TLS) je protokol, ktorý HTTPS používa na šifrovanie. Protokol TLS sa
+            kedysi
+            nazýval <span class="high">Secure Sockets Layer</span> (<span class="high">SSL</span>).</p>
+
+        <p><span class="high">UDP</span>: <span class="high">User Datagram Protocol</span> (<span class="high">UDP</span>) je rýchlejšia, ale menej spoľahlivá alternatíva k TCP na transportnej
+            vrstve.
+            Často sa používa v službách, ako je streamovanie videa a hranie hier, kde je rýchle dodávanie dát
+            prvoradé.</p>
+
+        <h2>Protokoly ktoré používajú routre</h2>
+
+        <p>Routre používajú určité protokoly na zistenie najefektívnejších sieťových ciest k iným routerom. Tieto
+            protokoly
+            sa nepoužívajú na prenos používateľských údajov. Medzi dôležité sieťové smerovacie protokoly patria:</p>
+
+        <p><span class="high">BGP</span>: Border Gateway Protocol (BGP) je protokol aplikačnej vrstvy, ktorý siete používajú na vysielanie adries
+            IP,
+            ktoré riadia. Tieto informácie umožňujú smerovačom rozhodnúť sa, cez ktoré siete by mali dátové pakety
+            prechádzať na ceste do svojich cieľov.</p>
+
+        <p><span class="high">EIGRP</span>: Protokol <span class="high">EIGRP</span> (Enhanced Interior Gateway Routing Protocol) identifikuje vzdialenosti medzi<span class="high"> routermi</span>.
+            <span class="high">EIGRP</span> automaticky aktualizuje záznamy o najlepších trasách každého <span class="high">routera</span> (nazývané smerovacia tabuľka) a
+            vysiela tieto aktualizácie do iných <span class="high">smerovačov</span> v <span class="high">sieti</span>.</p>
+
+        <p><span class="high">OSPF</span>: Protokol OSPF (Open Shortest Path First) vypočítava najefektívnejšie <span class="high">sieťové trasy</span> na základe rôznych
+            faktorov vrátane vzdialenosti a šírky pásma.</p>
+
+        <p><span class="high">RIP</span>: Routing Information Protocol (<span class="high">RIP</span>) je starší <span class="high">smerovací protokol</span>, ktorý identifikuje vzdialenosti medzi
+            smerovačmi. RIP je protokol aplikačnej vrstvy.</p>
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=BnWn18qUYyA"> • čo je protokol ? </a></br>
+            <a href="https://www.manageengine.com/network-monitoring/network-protocols.html"> • dalšie protokoly </a></br>
+
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+</body>
+</html>

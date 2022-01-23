@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Historia sieti</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Všetky Lekcie</h1>
+<line></line>
+
+<div class="margin-body">
+    <div class="lectures-container">
+        <div class="lecture-row">
+
+            <div class="lecture-box">
+                <h2>História Internetu</h2>
+                <p>
+                    V tejto lekcií sa dozviete ako vznikol internet. Aké boli prvé internetové technológie a prečo
+                    internet vôbec vznikol.
+                </p>
+                <a href="/historia_sieti">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Počítačové siete</h2>
+                <p>
+                    Čo je to počítačová sieť. Ako vznikali prvé počítačové siete. Aké počítačové siete existujú.
+                </p>
+                <a href="/pocitacove_siete">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Referenčný model</h2>
+                <p>
+                    Úvod do toho, čo sú referenčné modely. Čo je to referenčný model. Základné rozdelenie referenčných
+                    modelov. História referenčných modelov.
+                </p>
+                <a href="/referencny_model">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lectures-container">
+        <div class="lecture-row">
+
+            <div class="lecture-box">
+                <h2>ISO/OSI Model</h2>
+                <p>
+                    Čo je to ISO/OSI model. Aká je jeho hlavná funkcia. Základné rozdelenia v ISO/OSI modely.
+                    Základné rozdelenie vrstiev a ich funkcie.
+                </p>
+                <a href="/iso_osi_model">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>TCP/IP Model</h2>
+                <p>
+                    Čo je to TCP/IP model. Aká je jeho hlavná funkcia. Základné rozdelenie v TCP/IP modely.
+                    Základné rozdelenie vrstiev. Rozdiel vrstiev v OSI a v TCP/IP.
+                </p>
+                <a href="/tcp_ip_model">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>TCP/IP vs ISO a Prenos paketov</h2>
+                <p>
+                    Základné rozdiely medzi TCP/IP a ISO modelom. Ako funguje prenos paketov. Diagram toho, ako sa paket
+                    prenáša od odoslania až po prijatie.
+                </p>
+                <a href="/osi_vs_tcp_ip_packet_transfer">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lectures-container">
+        <div class="lecture-row">
+
+            <div class="lecture-box">
+                <h2>Sieťová vrstva</h2>
+                <p>
+                    Načo sieťová vrstva slúži a za čo zodpovedá. Kde sa nachádza. Ako funguje. Aké sú jej hlavne
+                    funkcie.
+                    Aké protokoly pracujú v sieťovej vrstve.
+                </p>
+                <a href="sietova_vrstva">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>IP Adresy</h2>
+                <p>
+                    Aké existujú IP Adresy. Základné rozdelenie IP adries. Ako sa počítajú IP Adresy. Typy IP adries.
+                </p>
+                <a href="/ip_adresy">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>MAC Adresy</h2>
+                <p>
+                    Základné rozdelenie MAC Adries. Rozdiel medzi MAC A IP adresami. Aké sieťové komponenty využívajú
+                    MAC Adresy. Štruktúra MAC Adresy.
+                </p>
+                <a href="/mac_adresy">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="lectures-container">
+        <div class="lecture-row">
+
+            <div class="lecture-box">
+                <h2>Adresy IPv6</h2>
+                <p>
+                    Rozdiel medzi IPv6 a IPv4. Prečo je IPv6 lepšia ako IPv4. Štruktúra IPv6 Adresy. Ako sa počítajú
+                    IPv6 Adresy.
+                </p>
+                <a href="/ipv6_adresy">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Sieťové topológie</h2>
+                <p>
+                    Aké sú základné sieťové topológie. Funkcie rôznych sieťových topologíi. Prenos v sieťových
+                    topológiach.
+                </p>
+                <a href="/sietove_topologie">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Základné sieťové komponenty</h2>
+                <p>
+                    Najpoužívanejšie softvérové a hardwarové časti siete. Funkcie týchto sieťových zariadení. Rozdelenia
+                    rôznych sieťových zariadení.
+                </p>
+                <a href="/sietove_komponenty">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+    <div class="lectures-container">
+        <div class="lecture-row">
+            <div class="lecture-box">
+                <h2>Linková vrstva</h2>
+                <p>
+                    Aké zariadenia táto vrstva využíva. Akú funkciu má tato vrstva v modele OSI a TCP/IP. Aké protokoly
+                    táto vrstva využíva.
+                </p>
+                <a href="/linkova_vrstva">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Fyzická vrstva</h2>
+                <p>
+                    Aké protokoly fyzická vrstva využíva. Aké zariadenia táto vrstva využíva. Kde v TCP a ISO modely sa
+                    nachádza. Ako sa šíri.
+                </p>
+                <a href="/fyzicka_vrstva">Prejsť do lekcie</a>
+
+            </div>
+            <div class="lecture-box">
+                <h2>Protokoly</h2>
+                <p>
+                    Čo je to protokol. Najčastejšie protokoly. Funkcie protokolov. Rozdelenie protokolov.
+                </p>
+                <a href="/protokoly">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+    <div class="lectures-container">
+        <div class="lecture-row">
+            <div class="lecture-box">
+                <h2>Podsiete</h2>
+                <p>
+                    Čo sú to podsiete. Aké je ich využitie v modele OSI a TCP/IP.
+                </p>
+                <a href="/podsiete">Prejsť do lekcie</a>
+            </div>
+
+            <div class="lecture-box">
+                <h2>Viac Zdrojov</h2>
+                <p>Tu sa nachádza viac zdrojov pre lepšie pochopenie základných sieťových pojmov.</p>
+                <a href="/zdroje">Prejsť do lekcie</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
+
+</body>
+</html>

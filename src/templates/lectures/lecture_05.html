@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISO/OSI Model</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+
+<h1 class="specific_heading_lectures">ISO/OSI Model</h1>
+<line></line>
+
+<div class="container">
+    <div class="main">
+        <h4>čo je to iso model, rozdelenie a funkcie vrstiev</h4>
+        <h2>úvod do ISO/OSI</h2>
+        <p><span class="high">Model OSI</span>, často označovaný ako model vrstvy <span class="high">ISO/OSI</span>., je
+            referenčným modelom,ktorý možno použiť na opis a
+            definovanie komunikácie medzi systémami. <span class="high">Referenčný model</span> má sedem jednotlivých
+            vrstiev, pričom každá vrstva
+            má
+            svoju úlohu.
+            Pojem <span class="high">OSI</span> znamená Open Systems Interconnection, ktorý zverejnila International
+            Telecommunication Union (ITU)
+            a
+            International Organization for Standardization (ISO)
+
+            Cieľom pri definovaní normy ISO/OSI bolo vytvorenie <span class="high">referenčného modelu</span>, ktorý
+            umožňuje komunikáciu rôznych
+            technických systémov prostredníctvom rôznych zariadení a technológií a poskytuje im kompatibilitu. <span
+                    class="high">Model OSI</span>
+            využíva na dosiahnutie tohto cieľa sedem rôznych vrstiev, ktoré sú na sebe hierarchicky založené. Tieto
+            vrstvy
+            predstavujú fázy nadväzovania každého spojenia, cez ktoré prechádzajú <span
+                    class="high">odosielané pakety</span>.</p>
+
+        <h2>Vrstvy a Funkcie</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Vrstva</th>
+                    <th class="table_header ">Funkcia</th>
+                </tr>
+                <tr>
+                    <td class="table_heading">7.Aplikáčna vrstva
+                    </td>
+                    <td class="text_table">Táto vrstva okrem iného riadi vstup a výstup údajov a poskytuje funkcie
+                        aplikácie.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">6.Prezenčná vrstva
+                    </td>
+                    <td class="text_table">Úlohou prezentačnej vrstvy je preniesť systémovo závislú prezentáciu údajov
+                        do podoby nezávislej od aplikácie.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">5.Relančná vrstva
+                    </td>
+                    <td class="text_table">relančná vrstva riadi logické spojenie medzi dvoma systémami a zabraňuje
+                        výpadkom spojenia alebo iných problémov.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">4.transportná vrstva
+                    </td>
+                    <td class="text_table">transportná vrstva sa používa na end-to-end kontrolu prenášaných dát.
+                        Transportná vrstva dokáže detekovať a vyhnúť sa preťaženiu a rozdelovať prenos dát na dátové
+                        toky.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">3.sieťová vrstva
+                    </td>
+                    <td class="text_table">Sieťová vrstva slúži hlavne na prenos. Dáta sa prenášajú cez celú sieť od
+                        odosielateľa k príjemcovi.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">2.Dátová vrstva
+                    </td>
+                    <td class="text_table">úlohou vrstvy 2 je umožniť spoľahlivé a bezchybné prenosy na príslušnom
+                        médiu. Na tento účel sú bitové toky z vrstvy 1 rozdelené do blokov alebo rámcov.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_heading">1.Fyzická vrstva
+                    </td>
+                    <td class="text_table">Používané techniky prenosu sú napríklad elektrické signály, optické signály
+                        alebo elektromagnetické vlny. Cez vrstvu 1 sa prenos uskutočňuje po drôtových alebo bezdrôtových
+                        prenosových linkách.
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <p>
+            <span class="high">Vrstvy 2-4</span> sú transportne orientované a <span class="high">vrstvy 5-7</span> sú
+            aplikačne orientované.
+            V každej vrstve sa vykonávajú presne definované úlohy a presne sú opísané rozhrania k susedným vrstvám.
+            Každá vrstva ponúka služby na použitie vrstve priamo nad ňou. Na sprístupnenie týchto služieb vrstva využíva
+            služby vrstvy pod ňou a vykonáva úlohy svojej vrstvy.
+
+            Ak dva systémy komunikujú, všetkých sedem vrstiev modelu OSI sa prejde aspoň dvakrát, pretože <span
+                class="high">odosielateľ</span> aj
+            príjemca musia brať do úvahy <span class="high">vrstvový model</span>. Na zabezpečenie bezpečnosti,
+            spoľahlivosti a výkonu komunikácie
+            je preto potrebné v jednotlivých vrstvách vykonávať veľké množstvo rôznych úloh.
+
+            Keď aplikácia odošle paket do druhého systému, systém spracuje vrstvy zobrazené vyššie od vrstvy 7 až po
+            vrstvu 1 a prijímací systém rozbalí prijatý paket od vrstvy <span class="high">1 až po vrstvu 7</span>.
+        </p>
+
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1EjycEzqJtKxYOVhkODeyMPdqmXasxOUw" alt="Model image in css">
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="side">
+        <div class="sidebar">
+            <h2>Lekcie</h2>
+            <a href="/historia_sieti">Historia Internetu</a>
+            <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+            <a href="/referencny_model" type="submit">Referenčný model</a>
+            <a href="/iso_osi_model">ISO/OSI Model</a>
+            <a href="/tcp_ip_model">TCP/IP Model</a>
+            <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+            <a href="/sietova_vrstva">Sieťová vrstva</a>
+            <a href="/ip_adresy">IP Adresy</a>
+            <a href="/podsiete">Podsiete</a>
+            <a href="/mac_adresy">Adresy MAC</a>
+            <a href="/ipv6_adresy">IPv6 Adresy</a>
+            <a href="/sietove_topologie">Sieťové topológie</a>
+            <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+            <a href="/linkova_vrstva">Linková vrstva</a>
+            <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+            <a href="/protokoly">Protokoly</a>
+
+        </div>
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=vv4y_uOneC0"> • ISO Model </a>
+        </div>
+    </div>
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

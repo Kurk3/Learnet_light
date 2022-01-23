@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sieťová vrstva</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Sieťová vrstva</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+        <h4>sieťová vrstva modelu osi jej funkcie ako funguje a začo zodpovedá.</h4>
+
+        <p><span class="high">Sieťová vrstva</span> (<span class="high">vrstva 3</span>) <span class="high">OSI</span>
+            riadi výmenu <span class="high">dátových paketov</span>, pretože tieto nemôžu byť priamo smerované do
+            <span class="high">prijímača</span>, a preto musia byť vybavené smerovacími uzlami. <span class="high">Dátové pakety</span>
+            sa potom prenášajú z uzla do uzla,
+            kým nedosiahnu svoj cieľ. Aby to bolo možné implementovať, sieťová vrstva identifikuje jednotlivé uzly
+            siete, nastavuje a čistí kanály pripojenia a stará sa o smerovanie a riadenie toku dát. Pri odosielaní
+            paketov sa vyhodnocujú adresy a dáta ktoré sú smerované cez sieť z <span class="high">uzla do uzla</span>.
+            Vo vrstvách nad <span class="high">Vrstvov 3</span> v
+            uzloch zvyčajne nedochádza k žiadnemu spracovaniu údajov. Na základe adries sa robí smerovanie a konštrukcia
+            <span class="high">smerovacích tabuliek</span>.</p>
+
+        <p>Stručne povedané, je zodpovedný za nasledujúce funkcie:</p>
+
+        <h5>• Logické adresovanie</h5>
+        <h5>• Smerovanie (Routing)</h5>
+
+        <p> Protokoly sú definované v každej <span class="high">vrstve OSI</span> a tieto protokoly predstavujú <span
+                class="high">súbor pravidiel</span> pre komunikáciu v
+            príslušnej vrstve. Sú transparentné pre protokoly vrstiev nad alebo pod. Niektoré protokoly plnia úlohy
+            <span class="high">niekoľkých vrstiev</span> a rozprestierajú sa na <span class="high">dvoch</span> alebo
+            <span class="high">viacerých vrstvách</span>. Najpoužívanejšie protokoly na
+            tejto vrstve sú:
+        </p>
+
+
+        <h5>• IPv4/IPv6</h5>
+        <h5>• IPsec</h5>
+        <h5>• ICMP</h5>
+        <h5>• IGMP</h5>
+        <h5>• RIP</h5>
+        <h5>• OSPF</h5>
+
+
+        <p>
+            Zabezpečujú smerovanie paketov zo zdroja do cieľa v rámci <span class="high">podsiete</span> alebo mimo nej.
+            Tieto dve podsiete môžu
+            mať rôzne schémy adresovania alebo môžu byť nekompatibilné. V oboch prípadoch <span class="high">prenos dát</span>  prechádza
+            cez celú komunikačnú sieť a zahŕňa smerovanie medzi uzlami siete. Keďže priama komunikácia medzi
+            odosielateľom a príjemcom nie je vždy možná kvôli rôznym <span class="high">podsieťam</span>, pakety sa musia posielať z uzlov, ktoré
+            sú na ceste. Preposlané pakety nedosiahnu <span class="high">vyššie vrstvy</span>, ale je im priradený nový prechodný cieľ a sú
+            odoslané do ďalšieho uzla.
+        </p>
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=Bp7ft_rEZuo"> • Ako funguje sieťová vrstva </a>
+        </div>
+    </div>
+
+
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

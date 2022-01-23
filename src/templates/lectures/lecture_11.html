@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAC Adresy</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">MAC Adresy</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+        <p>Každý host v sieti má svoju vlastnú 48-bitovú (<span class="high">6 oktetov</span>) adresu MAC (<span
+                class="high">Media Access Control</span>), znázornenú v
+            hexadecimálnom(v šestnastkovom) formáte. <span class="high">MAC</span> je <span
+                    class="high">fyzická adresa</span> pre naše sieťové rozhrania. Existuje niekoľko
+            rôznych štandardov pre MAC adresu:</p>
+
+        <h5> Ethernet (IEEE 802.3)</h5>
+        <h5> Bluetooth (IEEE 802.15)</h5>
+        <h5> WLAN (IEEE 802.11)</h5>
+
+        <p> Je to preto, že adresa <span class="high">MAC</span> adresuje fyzické pripojenie (sieťová karta, Bluetooth
+            alebo adaptér WLAN) hosta.
+            Každá sieťová karta má svoju individuálnu MAC adresu, ktorá sa konfiguruje raz na hardvérovej strane
+            výrobcu,
+            ale vždy sa dá aspoň dočasne zmeniť.</p>
+
+        <p>Pozrime sa na príklad takejto MAC adresy:</p>
+
+        <p> Mac adresa:</p>
+
+        <h5> • DE:AD:BE:EF:13:37</h5>
+        <h5> • DE-AD-BE-EF-13-37</h5>
+        <h5> • DEAD.BEEF.1337t</h5>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="table_heading">Binárna</th>
+                    <td class="text_table">1101 1110</td>
+                    <td class="text_table">1010 1101</td>
+                    <td class="text_table">1011 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="table_heading">Šestnástková sústava</th>
+                    <td class="text_table">DE</td>
+                    <td class="text_table">AD</td>
+                    <td class="text_table">BE</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+        <p> Keď je <span class="high">paket IP</span> doručený, musí byť adresovaný na vrstve 2 na fyzickú adresu <span
+                class="high">cieľového hosta</span> alebo na
+            smerovač/
+            NAT, ktorý je zodpovedný za smerovanie. Každý <span class="high">paket</span> má adresu odosielateľa a
+            cieľovú adresu.</p>
+
+        <p> Prvá polovica (<span class="high">3 bajty / 24 bitov</span>) je takzvaný Organization Unique Identifier
+            (OUI) definovaný Institute of
+            Electrical and Electronics Engineers (<span class="high">IEEE</span>) pre príslušných výrobcov.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="table_heading">Binárna</th>
+                    <td class="table_heading">1101 1110</td>
+                    <td class="table_heading">1010 1101</td>
+                    <td class="table_heading">1011 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="table_heading">Šestnástková sústava</th>
+                    <td class="table_heading">DE</td>
+                    <td class="table_heading">AD</td>
+                    <td class="table_heading">BE</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Posledná polovica <span class="high">MAC</span> adresy sa nazýva Individual Address Part alebo <span
+                class="high">Network Interface Controller</span> (<span class="high">NIC</span>),
+            ktorú priraďujú výrobcovia. Výrobca nastavuje túto bitovú sekvenciu iba raz a tým zabezpečuje, že úplná
+            adresa je jedinečná.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="text_table">1101 1110</td>
+                    <td class="text_table">1010 1101</td>
+                    <td class="text_table">1011 1110</td>
+                    <td class="table_heading">1110 1111</td>
+                    <td class="table_heading">0001 0011</td>
+                    <th class="table_heading">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="text_table">DE</td>
+                    <td class="text_table">AD</td>
+                    <td class="text_table">BE</td>
+                    <td class="table_heading">EF</td>
+                    <td class="table_heading">13</td>
+                    <td class="table_heading">37</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p> Ak sa host s cieľovou IP adresou nachádza v rovnakej podsieti, doručenie sa uskutoční priamo na fyzickú
+            adresu
+            cieľového počítača. Ak však tento host patrí do inej podsiete, <span class="high">ethernetový rámec</span>
+            je adresovaný na MAC adresu
+            zodpovedného routera. Ak sa cieľová adresa <span class="high">ethernetového rámca</span> zhoduje s vlastnou
+            adresou vrstvy 2, router
+            pošle
+            rámec vyšším vrstvám. Address Resolution Protocol (<span class="high">ARP</span>) sa používa v <span
+                    class="high">IPv4</span> na určenie <span class="high">MAC adries</span> spojených s
+            IP
+            adresami.</p>
+
+        <p> Rovnako ako v prípade adries IPv4 existujú aj určité vyhradené oblasti pre adresu <span
+                class="high">MAC</span>. Medzi ne patrí
+            napríklad
+            lokálny rozsah pre MAC.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Lokálny rozsah</th>
+                </tr>
+                <tr>
+                    <th class="text_table">02:00:00:00:00:00</th>
+                </tr>
+                <tr>
+                    <th class="text_table">06:00:00:00:00:00</th>
+                </tr>
+                <tr>
+                    <th class="text_table">0A:00:00:00:00:00</th>
+                </tr>
+                <tr>
+                    <th class="text_table">0E:00:00:00:00:00</th>
+                </tr>
+            </table>
+        </div>
+
+        <p>Okrem toho posledné dva bity v prvom oktete môžu hrať ďalšiu zásadnú úlohu. Posledný bit môže mať dva stavy,
+            0 a 1, ako už vieme. Posledný bit identifikuje MAC adresu ako <span class="high">Unicast</span> (0) alebo
+            Multicast (1). Pri unicast
+            to znamená, že odoslaný paket dosiahne iba jedného <span class="high">konkrétneho hosta</span>.</p>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="text_table">1101 111<span class="high">0</span></td>
+                    <td class="text_table">1010 1101</td>
+                    <td class="text_table">1011 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="text_table">D<span class="high">E</span></td>
+                    <td class="text_table">AD</td>
+                    <td class="text_table">BE</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p> Pri <span class="high">multicast</span> sa paket odošle iba raz všetkým hostiteľom v lokálnej sieti, ktorí
+            sa potom na základe svojej
+            konfigurácie rozhodnú, či paket prijmú alebo nie. Multicast adresa je jedinečná adresa, rovnako ako
+            broadcast
+            adresa, ktorá má pevné oktetové hodnoty. Broadcast predstavuje vysielaný hovor, kde sa dátové pakety
+            prenášajú
+            súčasne z jedného bodu do všetkých členov siete. Používa sa hlavne vtedy, ak adresa príjemcu paketu ešte nie
+            je
+            známa. Príkladom sú protokoly ARP (pre <span class="high">MAC adresy</span>) a <span
+                    class="high">DHCP</span> (pre <span class="high">IPv4 adresy</span>).</p>
+
+        <p> Definované hodnoty každého oktetu sú označené zelenou farbou. </p>
+
+        <h2>MAC Multicast</h2>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="table_heading">0000 0001</td>
+                    <td class="table_heading">0000 0000</td>
+                    <td class="table_heading">0101 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="table_heading">01</td>
+                    <td class="table_heading">00</td>
+                    <td class="table_heading">5E</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>MAC Broadcast</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <th class="table_heading">1111 1111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="table_heading">FF</td>
+                    <td class="table_heading">FF</td>
+                    <td class="table_heading">FF</td>
+                    <td class="table_heading">FF</td>
+                    <td class="table_heading">FF</td>
+                    <td class="table_heading">FF</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Predposledný bit v prvom oktete identifikuje, či ide o <span class="high">globálne OUI</span>, definované IEEE, alebo o lokálne
+            spravovanú MAC adresu.</p>
+
+        <h2>Globálna OUI</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="text_table">1101 11<span class="high">0</span>0</td>
+                    <td class="text_table">1010 1101</td>
+                    <td class="text_table">1011 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="text_table">D<span class="high">C</span></td>
+                    <td class="text_table">AD</td>
+                    <td class="text_table">BE</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Lokálne spravované</h2>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Typ sústavy</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">piaty oktet</th>
+                    <th class="table_header">šiesty oktet</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Binárna</th>
+                    <td class="text_table">1101 11<span class="high">1</span>0</td>
+                    <td class="text_table">1010 1101</td>
+                    <td class="text_table">1011 1110</td>
+                    <td class="text_table">1110 1111</td>
+                    <td class="text_table">0001 0011</td>
+                    <th class="text_table">0011 0111</th>
+                </tr>
+
+                <tr>
+                    <th class="text_table">Šestnástková sústava</th>
+                    <td class="text_table">D<span class="high">E</span></td>
+                    <td class="text_table">AD</td>
+                    <td class="text_table">BE</td>
+                    <td class="text_table">EF</td>
+                    <td class="text_table">13</td>
+                    <td class="text_table">37</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=N7dM_kD28dM"> • MAC Adresy </a> <br>
+            <a href="https://www.youtube.com/watch?v=LIzTo6e4FgY"> • IP Adresy </a>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+</body>
+</html>

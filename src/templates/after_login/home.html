@@ -1,0 +1,34 @@
+{% extends "base_templates/new_home.html" %} {% block title %}Home{% endblock %} {% block content %}
+
+    <br>
+    <p class="main_heading_home_page">LEARNET</p>
+    <p class="underheading_homepage">Siete & bezpečnosť</p>
+    <line></line>
+
+    <div class="div_text_container_homepage">
+
+        <p class="text_heading_in_text_homepage">Čo tato stránka obsahuje ?</p>
+        <p class="text_in_container_homepage">
+            Táto stránka obsahuje základne informácie o sieťach. Na tejto stránke sa nachádza 16 lekcií pri čom každá
+            obsahuje
+            témy alebo tému spojenú so sieťami, alebo internetovou bezpečnosťou.
+        </p>
+        <p class="text_heading_in_text_homepage">Čo sa na tejto stránke naučíš?</p>
+        <p class="text_in_container_homepage">Na tejto stránke sa naučíš všetko podstatne k tomu, aby si pochopil, ako
+            funguje internet (aspoň z časti). Naučíš sa, ako sa po  internete prenášajú dáta. Akým štýlom je sieť
+            rozdelená.
+            Ako sa počítajú IP adresy. Aké adresy v sieťach existujú. Čo je to protokol atď...
+        </p>
+
+        <p class="text_heading_in_text_homepage"> Pre koho je tato stránka určená? </p>
+        <p class="text_in_container_homepage">Tato stránka je určená pre ľudí s miernymi až žiadnymi skúsenosťami z
+            oblasti sieti (pre rýchlejšie pochopenie znalosť angličtiny).</p>
+        <br></br>
+        <form>
+            <div class="form-group">
+                <button formaction="/lectures">pokračovať</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

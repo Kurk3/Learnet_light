@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sieťové topológie</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Sieťové topológie</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+
+        <p>
+            <span class="high">Topológia siete</span> je typické usporiadanie a fyzické alebo logické spojenie zariadení
+            v sieti. Počítače sú
+            hostovia, a klienti a servery, aktívne využívajú sieť. Zahŕňajú aj sieťové komponenty, ako sú <span
+                class="high">switche</span>,
+            bridge a <span class="high">routery</span>, o ktorých budeme podrobnejšie diskutovať v ďalších častiach,
+            ktoré majú distribučnú
+            funkciu a zabezpečujú, že všetci <span class="high">hostovia</span> siete môžu navzájom nadviazať logické
+            spojenie. Topológia siete
+            určuje komponenty, ktoré sa majú použiť, a metódy prístupu k <span class="high">prenosovým médiám</span>.
+        </p>
+
+        <p>Rozloženie <span class="high">prenosového média</span> používaného na pripojenie zariadení je fyzická
+            topológia siete. Pre vodivé
+            médiá alebo médiá zo sklenených vlákien sa to týka plánu <span class="high">kabeláže</span>, pozícií uzlov a
+            spojení medzi uzlami a
+            <span class="high"> kabelážou</span>. Na rozdiel od toho, logická topológia je spôsob, akým signály pôsobia
+            na sieťové médium alebo
+            sposob akým sa budú dáta prenášať cez sieť z jedného zariadenia do <span class="high">fyzického pripojenia zariadení</span>.
+        </p>
+
+        <p>Celú oblasť topológie siete môžeme rozdeliť do troch oblastí:</p>
+
+        <h2>Rozdelenie</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Kablové</th>
+                    <th class="table_header">Bezdratové</th>
+                </tr>
+                <tr>
+                    <td class="text_table">Koaxiálny kábel</td>
+                    <td class="text_table">Wi-Fi</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Kabeláž zo sklenených vlákien</td>
+                    <td class="text_table">Vysielacia veža</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Krútena dvojlinka</td>
+                    <td class="text_table">Satelit</td>
+                </tr>
+                <tr>
+                    <td class="text_table">a dalšie</td>
+                    <td class="text_table">a dalšie</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Uzly – Riadič sieťového rozhrania (NIC)</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="text_table">Repeatery/Opakovače</th>
+                    <th class="text_table">Huby</th>
+                    <th class="text_table">Mosty</th>
+                    <th class="text_table">Switche</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Router/Modem</th>
+                    <td class="text_table">Brány</td>
+                    <td class="text_table">Firewally</td>
+                </tr>
+            </table>
+        </div>
+
+        <p><span class="high">Sieťové uzly</span> sú body pripojenia prenosového média k vysielačom a prijímačom
+            elektrických, optických alebo
+            <span class="high">rádiových signálov v médiu</span>. Uzol môže byť pripojený k počítaču, ale niektoré typy
+            môžu mať na uzle iba jeden
+            <span class="high">mikrokontrolér</span> alebo nemusia mať žiadne <span class="high">programovateľné zariadenie</span>.
+        </p>
+
+        <h2>čo je to topológia</h2>
+
+        <p><span class="high">Topológiu</span> si môžeme predstaviť ako <span class="high">štruktúru siete</span>. Táto
+            forma nemusí nevyhnutne zodpovedať skutočnému
+            fyzickému
+            usporiadaniu zariadení v sieti. Preto môžu byť tieto topológie buď fyzické alebo logické. Napríklad počítače
+            v
+            <span class="high">sieti LAN</span> môžu byť usporiadané do kruhu ale je veľmi nepravdepodobné, že by mali
+            skutočnú <span class="high">kruhovú
+                topológiu.</span></p>
+
+        <p>Sieťové topológie sú rozdelené do nasledujúcich ôsmich základných typov:</p>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="text_table">Point-Point/uzivatel-uzivatel</th>
+                    <th class="text_table">Bus</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Hviezdicová</th>
+                    <th class="text_table">Kruhová/Ring</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Mesh</th>
+                    <th class="text_table">Stromová/Tree</th>
+                </tr>
+                <tr>
+                    <th class="text_table">Hybridná</th>
+                    <th class="text_table">Reťazová/Daisy Chain</th>
+                </tr>
+            </table>
+        </div>
+
+        <p>Zložitejšie siete môžu byť postavené ako hybridy dvoch alebo viacerých základných topológií uvedených
+            vyššie.</p>
+
+        <h2>Point-to-point</h2>
+
+        <p>Najednoduchšia <span class="high">topológia siete</span> s vyhradeným spojením medzi dvoma hostami je <span
+                class="high">topológia point-to-point</span>. V tejto
+            topológii existuje priame a priame <span class="high">fyzické spojenie</span> iba medzi dvoma hostiteľmi.
+            Tieto dve zariadenia môžu
+            využívať tieto spojenia na vzájomnú komunikáciu.</p>
+
+        <p>Point-to-point topológie sú základným modelom tradičnej telefónie a nesmú sa zamieňať s P2P (architektúra
+            Peer-to-Peer).</p>
+
+        <h5>Point-to-Point topológia</h5>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=15IJxRjvYb2mDXvlVWL609-Ls_WJundri">
+        </div>
+
+        <h2>Bus/Zbernicová topológia</h2>
+        <p>Všetci hostitelia sú prepojení cez prenosové médium v <span class="high">topológii zbernice</span>. Každý
+            hostiteľ má prístup k
+            prenosovému médiu a signálom, ktoré sú cez neho prenášané. Neexistuje žiadny centrálny sieťový komponent,
+            ktorý riadi procesy na nej. Prenosovým médiom na to môže byť napríklad koaxiálny kábel.</p>
+
+        <p>Keďže médium je zdieľané so všetkými ostatnými, odosielať môže iba <span class="high">jeden host</span> a
+            všetci ostatní môžu iba
+            prijímať a vyhodnocovať údaje a zistiť, či sú určené pre neho.</p>
+
+
+        <h6>Topológia Bus</h6>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1_tYL9SX73wzbn2-um6DDPyIeGV3L_4oF">
+        </div>
+
+        <h2>Hviezda</h2>
+
+        <p><span class="high">Hviezdicová topológia</span> je sieťový komponent, ktorý udržiava spojenie so všetkými
+            hostiteľmi. Každý hostiteľ je
+            pripojený k centrálnemu <span class="high">sieťovému komponentu</span> prostredníctvom samostatného
+            spojenia. Zvyčajne ide o router,
+            hub alebo switch. Tieto spracovávajú funkciu preposielania <span class="high">dátových paketov</span>. Na
+            tento účel sa prijímajú
+            <span class="high">dátové pakety</span> a posielajú sa do cieľa. Dátová prevádzka na komponente centrálnej
+            siete môže byť veľmi
+            vysoká, pretože cez ňu prechádzajú všetky dáta.</p>
+
+        <h6>Topológia do Hviezdy</h6>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1-JoIhZ-RZm4N1nI-pvUW4WgzLP1u7hTj">
+        </div>
+
+        <h2>Ring/Kruhová</h2>
+
+        <p>Fyzická topológia kruhu je taká, že každý hostiteľ alebo uzol je pripojený k kruhu pomocou dvoch káblov:</p>
+
+        <p>Jeden pre prichádzajúce signály a
+            druhý pre odchádzajúcich.</p>
+
+        <p>To znamená, že jeden kábel je vstupný a druhý výstupný. Kruhová topológia zvyčajne nevyžaduje aktívny
+            sieťový komponent. Riadenie a prístup k <span class="high">prenosovému médiu</span> sú regulované
+            protokolom, ktorý všetky stanice
+            dodržiavajú.</p>
+
+        <p>Logická kruhová topológia je založená na fyzickej hviezdicovej topológii, kde distribútor v uzle simuluje
+            kruh presmerovaním z jedného portu na druhý.</p>
+
+        <p>Informácie sa prenášajú vo vopred určenom smere prenosu. Typicky sa k prenosovému médiu pristupuje postupne
+            od stanice k stanici pomocou vyhľadávacieho systému z centrálnej stanice alebo <span
+                    class="high">tokenu</span>. Token je vzor bitov,
+            ktorý nepretržite prechádza cez <span class="high">kruhovú sieť</span> v jednom smere, ktorý funguje podľa
+            procesu nároku na
+            token.</p>
+
+        <h6>Kruhová topológia</h6>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1bZUVu72eMiR7q0S9dG7Pg1om-ykg__3l">
+        </div>
+
+        <h2>Mesh</h2>
+
+        <p>Mnoho uzlov rozhoduje o spojeniach na fyzickej úrovni a o smerovaní na logickej úrovni v prepojených sieťach.
+            Preto sieťované štruktúry nemajú <span class="high">pevnú topológiu</span>. Zo základného konceptu existujú
+            dve základné štruktúry:
+            úplna
+            mesh a čiastočná mesh štruktúra.</p>
+
+        <p>Každý <span class="high">host</span> je pripojený ku každému druhému hostiteľovi v sieti v úplne prepojenej
+            štruktúre. To znamená,
+            že
+            hostitelia sú navzájom prepojení. Táto technika sa primárne používa vo <span
+                    class="high">WAN alebo MAN</span> na zabezpečenie vysokej
+            spoľahlivosti a šírky pásma.</p>
+
+        <p>V tomto nastavení môžu byť dôležité sieťové uzly, ako sú <span class="high">smerovače</span>, vzájomne
+            prepojené. Ak jeden <span class="high">smerovač</span>
+            zlyhá,
+            ostatné môžu bez problémov pokračovať v práci a sieť môže výpadok absorbovať kvôli mnohým pripojeniam.</p>
+
+        <p>Každý uzol s plne prepojenou <span class="high">topológiou</span> má rovnaké funkcie smerovania a pozná
+            susedné uzly, s ktorými môže
+            komunikovať, v blízkosti sieťovej brány a prevádzkového zaťaženia.</p>
+
+        <p>V čiastočnej <span class="high">mesh</span> štruktúre sú koncové body spojené iba jedným spojením. V tomto
+            type <span class="high">topológie siete</span> sú
+            špecifické uzly pripojené presne k jednému ďalšiemu uzlu a niektoré ďalšie uzly sú pripojené k dvom alebo
+            viacerým ďalším uzlom s pripojením point-to-point.</p>
+
+        <h6>Mesh Topológia</h6>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1BszWx91NQRRyV8uJfVllSMy9uiRjbPyo">
+        </div>
+
+        <h2>Stromová Topológia</h2>
+        <p>Stromová topológia je rozšírená hviezdicová topológia, ktorú majú v tejto štruktúre rozsiahlejšie lokálne
+            siete. To je užitočné najmä vtedy, keď sa kombinuje niekoľko <span class="high">topológií</span>. Táto topológia sa často používa
+            napríklad vo <span class="high">väčších</span> firemných budovách.</p>
+        <p>
+            Existujú logické <span class="high">stromové štruktúry</span> podľa kostry a fyzické. <span class="high">Modulárne moderné siete</span>, založené na
+            štruktúrovanej kabeláži s <span class="high">hierarchiou rozbočovačov</span>, majú tiež stromovú štruktúru. <span class="high">Stromové topológie</span> sa
+            používajú aj pre širokopásmové siete a mestské siete (MAN).</p>
+
+        <h6>Stromová topológia</h6>
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1m112FBesZUPCIOLbE5TyxOi1NvL0Gdpb">
+        </div>
+
+        <h2>Hybrid topológia</h2>
+        <p><span class="high">Hybridné siete</span> kombinujú dve alebo viac <span class="high">topológií</span>, takže výsledná sieť nepredstavuje žiadne štandardné
+            topológie. Napríklad stromová sieť môže predstavovať hybridnú topológiu, v ktorej sú hviezdicové siete
+            prepojené prostredníctvom vzájomne prepojených <span class="high">zbernicových sietí</span>. Avšak <span class="high">stromová sieť</span>, ktorá je prepojená s
+            inou stromovou sieťou, je stále <span class="high">topologicky stromová sieť</span>. Hybridná topológia sa vytvorí vždy, keď sa
+            prepoja dve rôzne základné sieťové topológie.</p>
+        <h6>Hybridná topológia</h6>
+
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=1PsbjduAeBL0jvw2FagWIutyJqFUBiDpg">
+        </div>
+
+        <h2>Daisy Chain</h2>
+        <p>V topológii <span class="high">daisy chain</span> je viacero <span class="high">hostov</span> spojených umiestnením kábla z jedného uzla do druhého.</p>
+        <p>Pretože to vytvára reťaz pripojení v ktorej je viacero hardvérových komponentov zapojených do série. Tento
+            typ siete sa často vyskytuje v automatizačnej technike (<span class="high">CAN</span>).</p>
+        <p>Daisy chaining je založený na fyzickom usporiadaní uzlov, na rozdiel od <span class="high">tokenových procedúr</span>, ktoré sú
+            štrukturálne, ale môžu byť nezávislé od fyzického rozloženia. Signál sa posiela do a z komponentu cez jeho
+            predchádzajúce uzly do počítačového systému.</p>
+
+        <h6>Daisy Chain Topológia</h6>
+        <div class="responsive-image">
+            <img src="https://docs.google.com/uc?id=16jZ6peTRjRDPoaVV1zkGy34ycpLul6dN">
+        </div>
+
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=e0CWszGpgAE"> • Sieťové topologie</a>
+        </div>
+    </div>
+
+
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

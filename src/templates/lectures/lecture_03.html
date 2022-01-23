@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Počitačové siete</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Počitačové siete</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+
+        <p>
+        <h3>Počitačova sieť</h3>
+        <p>Je to spojenie dvoch alebo viacerých počítačov, ktoré sú prepojené s cieľom zdieľať dáta alebo umožniť
+            komunikáciu. Typ siete závisí od počtu zariadení alebo od umiestnenia a vzdialenosti medzi nimi.</p>
+        <h2>Typy počitačových sietí</h2>
+
+        <h3>Personal Area Network (PAN)</h3>
+        <p>Toto je najmenšia a najzákladnejšia sieť, ktorú nájdete. Je určená na pokrytie veľmi malej plochy (zvyčajne
+            jednej miestnosti alebo budovy). <span class="high">PAN</span> sa najčastejšie používa pre jednotlivca a na
+            pripojenie iba niekoľkých
+            zariadení, ako je počítač, telefón a tlačiareň. Asi najznámejšou technológiou <span class="high">PAN</span>
+            je pripojenie <span class="high">Bluetooth</span>.
+            Takže, keď nabudúce pripojíte telefón k autu, aby ste mohli prehrávať hudbu, môžete poďakovať svojej osobnej
+            sieti!</p>
+        <h3>Local Area Network(LAN)</h3>
+        <p>Ako už názov napovedá, LAN spája skupinu počítačov alebo zariadení v rámci miestnej oblasti. Tento typ siete
+            je
+            možné využiť na pripojenie zariadení v rámci jednej budovy alebo dokonca <span class="high">2-3</span> budov v závislosti od vzájomnej
+            <span class="high">blízkosti</span>. Či už vaša kancelária využíva káblové alebo bezdrôtové pripojenie, takmer určite využíva
+            pripojenie k
+            sieti<span class="high"> LAN</span>.</p>
+        <h3>Wireless Local Area Network(WLAN)</h3>
+        <p>WLAN je jednoducho sieť LAN, ktorá sa pri pripájaní nespolieha na káble. Takže keď používate <span
+                class="high">WiFi</span>, používate
+            <span>WLAN</span>. Siete <span class="high">WLAN</span> sa zvyčajne používajú v rovnakom scenári ako siete
+            <span class="high">LAN</span>, záleží len na tom, či
+            uprednostňujete
+            káblové alebo bezdrôtové riešenie.
+            Metropolitan Area Network(MAN)
+            MAN, väčší ako LAN, ale menší ako WAN, zahŕňa prvky oboch typov sietí. Spája viacero sietí LAN a pokrýva
+            oblasť,
+            ako je mesto alebo obec. Správu môže zvládnuť aj jedna kvalifikovaná osoba.</p>
+        <h3>Wide Area Network (WAN)</h3>
+        <p>Siete <span class="high">WAN</span> robia to isté ako siete <span class="high">LAN</span>, ale na väčšej
+            ploche pri pripájaní viacerých zariadení. Aj keď sú od
+            seba
+            vzdialené míle,<span class="high"> WAN </span>dokáže prepojiť zariadenia na diaľku. V skutočnosti WAN je
+            internet, ktorý spája
+            počítače a
+            zariadenia po celom svete. Keďže je oveľa väčšia, tento typ siete zvyčajne udržiava viacero správcov a
+            vlastníctvo je rozdelené medzi rôzne organizácie.
+        <h3>STORAGE AREA NETWORK (SAN)</h3>
+        <p><span class="high">SAN </span>je navrhnutý tak, aby zvládal prenosy a <span class="high">ukladanie veľkých dát</span>.
+            Účelom tejto siete
+            je presunúť väčšie,
+            zložitejšie úložné prostriedky preč zo <span class="high">siete</span> do samostatnej, <span class="high">vysokovýkonnej atmosféry</span>.
+            Umožňuje to nielen
+            jednoduché získavanie a ukladanie údajov, ale tiež <span class="high">uvoľňuje priestor</span> a zlepšuje
+            celkový výkon <span
+                    class="high">pôvodnej
+                    siete</span>.</p>
+        <h3>Virtual Private Network(VPN)</h3>
+        <p>Účelom <span class="high">VPN</span> je zvýšiť bezpečnosť a súkromie pri prístupe k sieti. VPN funguje ako
+            prostredník medzi vami a
+            sieťou
+            tým, že šifruje vaše údaje a skrýva vašu identitu. Ide o skvelú možnosť na odosielanie a prijímanie
+            citlivých
+            informácií, avšak použitie <span class="high">VPN</span> je ideálne kedykoľvek sa pripojíte k internetu.
+            Kedykoľvek ste vo verejnej
+            sieti,
+            riskujete, že sa na vás zaútočí hacker, takže použitie VPN je najlepším riešením na zaistenie vašej
+            <span class="high">kybernetickej bezpečnosti.</span></p>
+        </p>
+    </div>
+
+
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=4_zSIXb7tLQ"> • Rozdelenie počítačových sietí </a>
+        </div>
+    </div>
+
+
+</div>
+<footer>
+  <p class="footer-lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>

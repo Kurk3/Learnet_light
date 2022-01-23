@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linková vrstva</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Linková vrstva </h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+
+        <p><span class="high">Linková vrstva</span> je 2. vrstva v <span class="high">modeli OSI</span>. Má štyri základné funkcie. Sú to komunikácia so sieťovou vrstvou,
+            segmentácia a opätovné zostavenie a usporiadanie bitov komunikácia s <span class="high">fyzickou vrstvou</span>. <span class="high">Linková vrstva</span> nejde
+            mimo
+            lokalnej siete.</p>
+
+        <p>Hlavným zameraním je poskytnúť funkčné prostriedky na prenos údajov medzi sieťami. Niektoré príklady týchto
+            protokolov sú <span class="high">Ethernet</span>, point-to-point protokol a pripojenia Advanced Data Communication Control
+            <span class="high">Procedures(ADCCP)</span>.</p>
+
+        <p>V rámci vrstvy prepojenia sú dve <span class="high">podvrstvy</span>. Sú to podvrstva riadenia logického spojenia a podvrstva riadenia
+            prístupu k médiám (<span class="high">MAC</span>).</p>
+
+        <p><span class="high">Podvrstva</span> riadenia logického spojenia je najvyššou podvrstvou. Sú to protokoly multiplexov LLC, ktoré bežia
+            na
+            vrstve spojenia. Voliteľne poskytujú riadenie toku, potvrdenie a upozornenia na chyby.</p>
+
+        <p>Podvrstva riadenia prístupu k <span class="high">médiám</span> určuje, kto má kedykoľvek povolený <span class="high">prístup k médiám</span>. Existujú dve formy
+            kontroly prístupu k médiám, sú <span class="high">distribuované</span> a <span class="high">centralizované</span>. Oboje možno prirovnať ako priklad komunikácie
+            medzi ľuďmi. V týchto „konverzáciách“ <span class="high">MAC</span> hľadá body, v ktorých sa „rozprávajú“ dve spojenia súčasne a núti
+            jedno, aby sa na náhodný čas zastavilo a potom sa pokúsilo pokračovať.</p>
+
+        <p>Táto <span class="high">podvrstva</span> vkladá špecifikované množstvo času medzi snímky, počíta zostávajúce znaky v hlavičke rámca,
+            spracováva snímky so <span class="high">špeciálnou sekvenciou</span> bajtov pomocou vypĺňania bitov. Táto výplň bitov nahrádza
+            počiatočné
+            a koncové značky príznakmi, ktoré pozostávajú zo špeciálneho vzoru bitov.</p>
+
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=VBAuzvVzOQU"> • Linková vrstva </a>
+        </div>
+    </div>
+
+
+</div>
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+
+</body>
+</html>t

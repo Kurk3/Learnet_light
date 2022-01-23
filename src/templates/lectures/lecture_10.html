@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Podsiete</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Podsiete</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+        <p> Rozdelenie rozsahu adries IPv4 adries na niekoľko menších rozsahov adries sa nazýva podsieť.
+
+            <span class="high">Podsieť</span> je <span class="high">logický segment siete</span>, ktorý používa IP
+            adresy s rovnakou <span class="high">sieťovou adresou</span>. <span class="high">Podsieť</span> si môžeme
+            predstaviť ako označený vchod na veľkej chodbe budovy. Môžu to byť napríklad sklenené dvere, ktoré oddeľujú
+            rôzne oddelenia v budove spoločnosti. Pomocou <span class="high">podsiete</span> si môžeme sami vytvoriť
+            konkrétnu podsieť(vlastné
+            oddelenie) alebo zistiť nasledujúci obrys/tvar príslušnej siete:</p>
+
+        <h5> • Sieťová adresa</h5>
+        <h5> • Adresa vysielania/Broadcastu</h5>
+        <h5> • Prvý host</h5>
+        <h5> • Posledný host</h5>
+        <h5> • Počet hostov</h5>
+
+
+        <p> Vezmime si ako príklad nasledujúcu adresu IPv4 a masku podsiete:</p>
+
+        <h5> • Adresa IPv4: 192.168.12.160</h5>
+        <h5> • Maska podsiete: 255.255.255.192</h5>
+        <h5> • CIDR: 192.168.12.160/26</h5>
+
+        <p>Už vieme, že IP adresa je rozdelená na sieťovú časť a hostiteľskú časť.</p>
+
+        <h2>Sieťová časť</h2>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="table_heading">1100 0000</td>
+                    <td class="table_heading">1010 1000</td>
+                    <td class="table_heading">0000 1100</td>
+                    <td class="text_table">1010 0000</td>
+                    <td class="text_table">192.168.12.160/26</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="table_heading">255.255.255.192</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="table_heading">/16</td>
+                    <td class="table_heading">/24</td>
+                    <td class="table_heading">/32</td>
+                </tr>
+            </table>
+        </div>
+
+        <p> V podsieťach používame masku podsiete ako šablónu pre adresu IPv4. Z 1-bitov v maske podsiete vieme, ktoré
+            bity
+            v IPv4 adrese nemožno zmeniť. Tie sú pevné a teda určujú „hlavnú sieť“, v ktorej sa podsieť/subnet
+            nachádza.</p>
+        <h2> Host časť </h2>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="text_table">1010 1000</td>
+                    <td class="text_table">0000 1100</td>
+                    <td class="table_heading">1010 0000</td>
+                    <td class="text_table">192.168.12.160/26</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="text_table">1111 1111</td>
+                    <td class="text_table">1111 1111</td>
+                    <td class="text_table">1111 1111</td>
+                    <td class="table_heading">1100 0000</td>
+                    <td class="text_table">255.255.255.192</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="text_table">/16</td>
+                    <td class="text_table">/24</td>
+                    <td class="text_table">/32</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Bity v hostovej časti možno zmeniť na prvú a poslednú adresu. Prvá adresa je sieťová adresa a posledná adresa
+            je
+            adresa broadcast pre príslušnú podsieť.</p>
+
+        <p>Sieťová adresa je dôležitá pre doručenie <span class="high">dátového paketu</span>. Ak je sieťová adresa
+            rovnaká pre zdrojovú a cieľovú
+            adresu, dátový paket sa doručí v rámci rovnakej <span class="high">podsiete</span>. Ak sa sieťové adresy
+            líšia, <span class="high">dátový paket</span> musí byť
+            smerovaný do inej podsiete cez predvolenú bránu.</p>
+
+        <p>Maska podsiete určuje, kde k tomuto oddeleniu dôjde.</p>
+
+        <h2>Oddelenie sieťových a hostových častí</h2>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="text_table">1010 1000</td>
+                    <td class="text_table">0000 1100</td>
+                    <td class="text_table">1010 0000</td>
+                    <td class="text_table">192.168.12.160/26</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1100 0000</td>
+                    <td class="text_table">255.255.255.192</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="table_heading">/16</td>
+                    <td class="table_heading">/24</td>
+                    <td class="table_heading">/32</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <h2>Adresa siete</h2>
+        <p>Ak teda teraz nastavíme všetky bity na 0 v hostovej časti adresy IPv4, dostaneme sieťovú adresu príslušnej
+            podsiete.</p>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="text_table">1010 1000</td>
+                    <td class="text_table">0000 1100</td>
+                    <td class="table_heading">1010 0000</td>
+                    <td class="table_heading">192.168.12.160/26</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1100 0000</td>
+                    <td class="text_table">255.255.255.192</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="text_table">/16</td>
+                    <td class="text_table">/24</td>
+                    <td class="text_table">/32</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <h2>Adresa Broadcast</h2>
+        <p>Ak nastavíme všetky bity v hostovej časti IPv4 adresy na 1, dostaneme broadcast adresu.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="text_table">1010 1000</td>
+                    <td class="text_table">0000 1100</td>
+                    <td class="table_heading">1010 0000</td>
+                    <td class="table_heading">192.168.12.160/26</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1100 0000</td>
+                    <td class="text_table">255.255.255.192</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="text_table">/16</td>
+                    <td class="text_table">/24</td>
+                    <td class="text_table">/32</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p>Keďže teraz vieme, že adresy <span class="high">IPv4</span> 192.168.12.128 a 192.168.12.191 sú priradené,
+            všetky ostatné adresy IPv4 sú
+            medzi 192.168.12.129-190. Teraz vieme, že táto podsieť nám ponúka celkovo <span class="high">64 - 2</span>
+            (adresa siete a vysielacia
+            adresa) alebo <span class="high">62 adries IPv4</span>, ktoré môžeme prideliť našim <span class="high">hostiteľom</span>.
+        </p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Hostovia</th>
+                    <th class="table_header">IPv4</th>
+
+                </tr>
+                <tr>
+                    <td class="text_table">Sieťová Adresa</td>
+                    <td class="text_table">Prvý host</td>
+                    <td class="text_table">Ostatný hostovia</td>
+                    <td class="text_table">Posledný Hostost</td>
+                    <td class="table_heading">Adresa Broadcast</td>
+
+                </tr>
+                <tr>
+                    <td class="text_table">192.168.12.128</td>
+                    <td class="text_table">192.168.12.129</td>
+                    <td class="text_table">....</td>
+                    <td class="text_table">192.168.12.190</td>
+                    <td class="text_table">192.168.12.191</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Rozdelenie podsieti do menších sietí</h2>
+        <p>Predpokladajme teraz, že sme ako správcovia dostali za úlohu rozdeliť nám pridelenú podsieť na 4 ďalšie
+            podsiete. Preto je dôležité vedieť, že podsiete môžeme rozdeliť iba na základe <span class="high">binárneho systému</span>.
+        </p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Exponent</th>
+                    <th class="table_header">Hodnoty</th>
+
+                </tr>
+                <tr>
+                    <td class="text_table">2^0</td>
+                    <td class="text_table">1</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^1</td>
+                    <td class="text_table">2</td>
+                </tr>
+
+                <tr>
+                    <td class="text_table">2^2</td>
+                    <td class="text_table">4</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^3</td>
+                    <td class="text_table">8</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^4</td>
+                    <td class="text_table">16</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^5</td>
+                    <td class="text_table">32</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^6</td>
+                    <td class="text_table">64</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^7</td>
+                    <td class="text_table">128</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2^8</td>
+                    <td class="text_table">256</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p>Preto môžeme 64 hostov, ktorých poznáme, vydeliť 4. 4 sa rovná exponentu 2^2 v binárnom systéme, takže
+            zistíme
+            počet bitov pre <span class="high">masku podsiete</span>, o ktorú ju musíme rozšíriť. Poznáme teda
+            nasledujúce parametre:</p>
+
+        <h5> • Subnet/podsieť: 192.168.12.128/26</h5>
+        <h5> • Potrebné Subnety: 4</h5>
+
+        <p> Teraz zväčšíme/rozšírime masku podsiete o 2 bity z /26 na /28 a vyzerá to takto:</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Detaily</th>
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+                    <th class="table_header">Decimálna</th>
+                </tr>
+                <tr>
+                    <td class="text_table">IPv4</td>
+                    <td class="text_table">1100 0000</td>
+                    <td class="text_table">1010 1000</td>
+                    <td class="text_table">0000| 1100</td>
+                    <td class="text_table">1010 0000</td>
+                    <td class="text_table">192.168.12.160/28</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Maska podsiete</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111 1111</td>
+                    <td class="table_heading">1111| 0000</td>
+                    <td class="table_heading">255.255.255.240</td>
+                </tr>
+                <tr>
+                    <td class="text_table">Bity</td>
+                    <td class="text_table">/8</td>
+                    <td class="text_table">/16</td>
+                    <td class="text_table">/24</td>
+                    <td class="text_table">/32</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p>Ďalej môžeme rozdeliť 64 IPv4 adries, ktoré máme k dispozícii, na 4 časti:</p>
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">Hostovia</th>
+                    <th class="table_header">Operator</th>
+                    <th class="table_header">Rozsah hostiteľov pre každú podsieť</th>
+
+                </tr>
+                <tr>
+                    <td class="text_table">64</td>
+                    <td class="text_table">/</td>
+                    <td class="text_table">4</td>
+                    <td class="text_table">=16</td>
+                </tr>
+            </table>
+        </div>
+
+        <p> Takže vieme, aká veľká bude každá podsieť. Odteraz začíname od pridelenej sieťovej adresy (192.168.12.128) a
+            4-krát pridáme 16 hostiteľov:</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">číslo podsiete</th>
+                    <th class="table_header">sieťová adresa</th>
+                    <th class="table_header">prvý host</th>
+                    <th class="table_header">posledný host</th>
+                    <th class="table_header">broadcast adresy</th>
+                    <th class="table_header">CIDR</th>
+                </tr>
+                <tr>
+                    <td class="text_table">1</td>
+                    <td class="text_table">192.168.12.128</td>
+                    <td class="text_table">192.168.12.129</td>
+                    <td class="text_table">192.168.12.142</td>
+                    <td class="text_table">192.168.12.143</td>
+                    <td class="text_table">192.168.12.128/28</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2</td>
+                    <td class="text_table">192.168.12.144</td>
+                    <td class="text_table">192.168.12.145</td>
+                    <td class="text_table">192.168.12.158</td>
+                    <td class="text_table">192.168.12.159</td>
+                    <td class="text_table">192.168.12.144/28</td>
+                </tr>
+                <tr>
+                    <td class="text_table">3</td>
+                    <td class="text_table">192.168.12.160</td>
+                    <td class="text_table">192.168.12.161</td>
+                    <td class="text_table">192.168.12.174</td>
+                    <td class="text_table">192.168.12.175</td>
+                    <td class="text_table">192.168.12.160/28</td>
+                </tr>
+                <tr>
+                    <td class="text_table">4</td>
+                    <td class="text_table">192.168.12.176</td>
+                    <td class="text_table">192.168.12.177</td>
+                    <td class="text_table">192.168.12.190</td>
+                    <td class="text_table">192.168.12.191</td>
+                    <td class="text_table">192.168.12.176/28</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <h2>Podsieťovanie</h2>
+        <p>Môže sa zdať, že v <span class="high">podsieťach</span> je veľa matematiky, ale každý <span class="high">oktet</span>
+            sa opakuje a všetko je mocninou
+            dvoch, takže nemusí byť veľa zapamätania. Prvá vec, ktorú musíte urobiť, je zistiť, aké zmeny
+            <span class="high">oktetu</span>.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+
+                    <th class="table_header">prvý oktet</th>
+                    <th class="table_header">druhý oktet</th>
+                    <th class="table_header">tretí oktet</th>
+                    <th class="table_header">štvrtý oktet</th>
+
+                </tr>
+                <tr>
+                    <td class="text_table">/8</td>
+                    <td class="text_table">/16</td>
+                    <td class="text_table">/24</td>
+                    <td class="text_table">/32</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>Zapamätaním si týchto štyroch čísel je možné identifikovať, ktorý <span class="high">oktet IP</span> adresy
+            sa môže zmeniť. Vzhľadom na
+            sieťovú adresu: 192.168.1.1/25 je okamžite zrejmé, že 192.168.2.4 nebude v rovnakej sieti, pretože podsieť
+            /25
+            znamená, že sa môže zmeniť iba <span class="high">štvrtý oktet</span>.</p>
+
+        <p>Ďalšia časť identifikuje, aká veľká môže byť každá <span class="high">podsieť</span>, a to vydelením ôsmich
+            <span class="high">sieťou</span> a zvyšok. Nazýva sa
+            to
+            aj <span class="high">modulová operácia</span> (%) a vo veľkej miere sa využíva v <span class="high">kryptológii</span>.
+            Vzhľadom na náš predchádzajúci príklad
+            /25,
+            (25 % 8) by bolo 1. Je to preto, že osem sa zmestí do 25 trikrát (8 * 3 = 24). Zostáva 1, čo je sieťový bit
+            vyhradený pre masku siete. V každom <span class="high">oktete</span> adresy IP je celkovo osem bitov. Ak sa
+            jedna použije pre masku
+            siete,
+            rovnica bude 2^(8-1) alebo 2^7, 128. Tabuľka nižšie obsahuje všetky čísla.</p>
+
+
+        <div class="table-div">
+            <table>
+                <tr>
+                    <th class="table_header">zvyšok</th>
+                    <th class="table_header">číslo</th>
+                    <th class="table_header">Exponent</th>
+                    <th class="table_header">forma delenia</th>
+
+                </tr>
+                <tr>
+                    <td class="text_table">0</td>
+                    <td class="text_table">256</td>
+                    <td class="text_table">2^8</td>
+                    <td class="text_table">256</td>
+                </tr>
+                <tr>
+                    <td class="text_table">1</td>
+                    <td class="text_table">128</td>
+                    <td class="text_table">2^7</td>
+                    <td class="text_table">256/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">2</td>
+                    <td class="text_table">64</td>
+                    <td class="text_table">2^6</td>
+                    <td class="text_table">256/2/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">3</td>
+                    <td class="text_table">32</td>
+                    <td class="text_table">2^5</td>
+                    <td class="text_table">256/2/2/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">4</td>
+                    <td class="text_table">16</td>
+                    <td class="text_table">2^4</td>
+                    <td class="text_table">256/2/2/2/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">5</td>
+                    <td class="text_table">8</td>
+                    <td class="text_table">2^3</td>
+                    <td class="text_table">256/2/2/2/2/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">6</td>
+                    <td class="text_table">4</td>
+                    <td class="text_table">2^2</td>
+                    <td class="text_table">256/2/2/2/2/2/2</td>
+                </tr>
+                <tr>
+                    <td class="text_table">7</td>
+                    <td class="text_table">2</td>
+                    <td class="text_table">2^1</td>
+                    <td class="text_table">256/2/2/2/2/2/2/2</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p> Zložitou časťou je získanie skutočného rozsahu <span class="high">adries IP</span>, pretože 0 je číslo a nie
+            nula v sieti nie je.
+            Takže v
+            našom /25 so 128 IP adresami je prvý rozsah 192.168.1.0-127. Prvá adresa je sieť a posledná je vysielacia
+            adresa, čo znamená, že použiteľný priestor <span class="high">IP</span> by bol 192.168.1.1-126. Ak by naša
+            <span class="high">IP adresa</span> klesla nad 128,
+            potom
+            by využiteľný <span class="high">IP</span> priestor bol 192.168.129-254 (<span class="high">128IPs sieť a 255 je broadcast</span>).
+        </p>
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+                <h2>Lekcie</h2>
+                <a href="/historia_sieti">Historia Internetu</a>
+                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+                <a href="/referencny_model" type="submit">Referenčný model</a>
+                <a href="/iso_osi_model">ISO/OSI Model</a>
+                <a href="/tcp_ip_model">TCP/IP Model</a>
+                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+                <a href="/sietova_vrstva">Sieťová vrstva</a>
+                <a href="/ip_adresy">IP Adresy</a>
+                <a href="/podsiete">Podsiete</a>
+                <a href="/mac_adresy">Adresy MAC</a>
+                <a href="/ipv6_adresy">IPv6 Adresy</a>
+                <a href="/sietove_topologie">Sieťové topológie</a>
+                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+                <a href="/linkova_vrstva">Linková vrstva</a>
+                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+                <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://www.youtube.com/watch?v=U8077qBBSqg"> • Subnetting/Podsieťovanie </a> </br>
+            <a href="https://www.youtube.com/watch?v=ecCuyq-Wprc"> • Mental Subneting/Podsiete</a>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+  <p class="footer_lectures">Copyright &copy; learnet.com</p>
+ </footer>
+</body>
+</html>
