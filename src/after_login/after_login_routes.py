@@ -10,7 +10,6 @@ def home():
 def homepage():
     return render_template("after_login/home.html")
 
-
 @views.route('/zdroje', methods=['GET', 'POST'])
 def zdroje():
     return render_template("lectures/zdroje.html")
