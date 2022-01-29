@@ -29,45 +29,60 @@
 <div class="container">
     <div class="main">
 
+        <h4>čo sú to IP Adresy. Aký je rozdiel medzi IP Adresou a MAC Adresou.
+            Rozdiel medzi IP4 a IPv6. čo su to adresy
+            broadcast,čo je to binárny systém. </h4>
 
         <p>
-            Každého <span class="high">hosta</span> v sieti je možné identifikovať podľa takzvanej <span class="high">adresy MAC</span> (<span class="high">Media Access Control</span>). To by
+            Každého <span class="high">hosta</span> v sieti je možné identifikovať podľa takzvanej <span class="high">adresy MAC</span>
+            (<span class="high">Media Access Control</span>). To by
             umožnilo výmenu údajov v rámci tejto jednej siete. Ak sa vzdialený hostiteľ nachádza v inej sieti, znalosť
             MAC adresy nestačí na vytvorenie spojenia. Adresovanie na internete sa vykonáva prostredníctvom adresy IPv4
-            a/alebo <span class="high">IPv6</span>, ktorá sa skladá zo <span class="high">sieťovej adresy</span> a adresy hosta.
+            a/alebo <span class="high">IPv6</span>, ktorá sa skladá zo <span class="high">sieťovej adresy</span> a
+            adresy hosta.
         </p>
         <p>Nezáleží na tom, či ide o menšiu sieť, napríklad domácu počítačovú sieť, alebo celý internet. IP adresa
-            zabezpečuje <span class="high">doručenie údajov správnemu príjemcovi</span>. Zastúpenie <span class="high">MAC a IPv4 / IPv6</span> adries si môžeme predstaviť
+            zabezpečuje <span class="high">doručenie údajov správnemu príjemcovi</span>. Zastúpenie <span class="high">MAC a IPv4 / IPv6</span>
+            adries si môžeme predstaviť
             nasledovne:</p>
 
         <h5>• IPv4 / IPv6 - popisuje jedinečnú poštovú adresu a okres budovy príjemcu.</h5>
         <h5>• MAC - popisuje presné poschodie a byt toho daneho človeka.</h5>
 
 
-        <p>Je možné, aby jedna <span class="high">IP adresa</span> adresovala viacero prijímačov (<span class="high">broadcasting</span>) alebo aby zariadenie odpovedalo na
-            viacero <span class="high">IP</span> adries. Je však potrebné zabezpečiť, aby každá <span class="high">IP</span> adresa bola v rámci siete pridelená iba
+        <p>Je možné, aby jedna <span class="high">IP adresa</span> adresovala viacero prijímačov (<span class="high">broadcasting</span>)
+            alebo aby zariadenie odpovedalo na
+            viacero <span class="high">IP</span> adries. Je však potrebné zabezpečiť, aby každá <span
+                    class="high">IP</span> adresa bola v rámci siete pridelená iba
             raz.</p>
 
         <h2>IPv4 štruktúra</h2>
 
-        <p>Najbežnejšou metódou prideľovania <span class="high">IP</span> adries je <span class="high">IPv4</span>, ktorá pozostáva z <span class="high">32-bitového binárneho čísla</span>,
-            kombinovaného do štyroch <span class="high">8-bitových</span> skupín (<span class="high">oktetov</span>) v rozsahu od 0 do 255. Tie sú prevedené na ľahšie
-            čitateľné desatinné čísla, oddelené bodkami a reprezentované ako bodkovaný <span class="high">desiatkový zápis</span>.</p>
+        <p>Najbežnejšou metódou prideľovania <span class="high">IP</span> adries je <span class="high">IPv4</span>,
+            ktorá pozostáva z <span class="high">32-bitového binárneho čísla</span>,
+            kombinovaného do štyroch <span class="high">8-bitových</span> skupín (<span class="high">oktetov</span>) v
+            rozsahu od 0 do 255. Tie sú prevedené na ľahšie
+            čitateľné desatinné čísla, oddelené bodkami a reprezentované ako bodkovaný <span class="high">desiatkový zápis</span>.
+        </p>
         <br></br>
         <p>Takto to može vyzerať:</p>
         <h5>• Binárna: 0111 1111.0000 0000.0000 0000.0000 0001</h5>
         <h5>• Decimálna: 127.0.0.1</h5>
 
 
-        <p>Každému sieťovému rozhraniu (<span class="high">sieťovým kartám, sieťovým tlačiarňam alebo smerovačom</span>) je priradená jedinečná
+        <p>Každému sieťovému rozhraniu (<span class="high">sieťovým kartám, sieťovým tlačiarňam alebo smerovačom</span>)
+            je priradená jedinečná
             adresa IP.</p>
 
         <p>Formát IPv4 umožňuje 4 294 967 296 jedinečných adries. IP adresa je rozdelená na hostiteľskú časť a sieťovú
-            časť. Router prideľuje hostiteľskej časti adresy IP bud doma alebo ju <span class="high">prideluje správca</span>. Sieťovú časť
+            časť. Router prideľuje hostiteľskej časti adresy IP bud doma alebo ju <span
+                    class="high">prideluje správca</span>. Sieťovú časť
             prideľuje
-            príslušný <span class="high">správca siete</span>. Na internete je to IANA, ktorá prideľuje a spravuje jedinečné adresy IP.</p>
+            príslušný <span class="high">správca siete</span>. Na internete je to IANA, ktorá prideľuje a spravuje
+            jedinečné adresy IP.</p>
 
-        <p> V minulosti tu prebiehal aj ďalší typ klasifikácie. Sieťové bloky IP boli rozdelené do tried <span class="high">A – E</span>. Rôzne
+        <p> V minulosti tu prebiehal aj ďalší typ klasifikácie. Sieťové bloky IP boli rozdelené do tried <span
+                class="high">A – E</span>. Rôzne
             triedy
             sa líšili v dĺžke hostiteľa a zdieľania siete.</p>
 
@@ -140,7 +155,8 @@
         <h2>Maska podsiete</h2>
         <p>
             Ďalšie oddelenie týchto tried do malých sietí sa vykonáva pomocou podsietí. Toto oddelenie sa vykonáva
-            pomocou sieťových masiek, ktoré sú dlhé ako adresa <span class="high">IPv4</span>. Rovnako ako pri triedach popisuje, ktoré bitové
+            pomocou sieťových masiek, ktoré sú dlhé ako adresa <span class="high">IPv4</span>. Rovnako ako pri triedach
+            popisuje, ktoré bitové
             pozície v <span class="high">rámci IP</span> adresy fungujú ako sieťová časť alebo hostiteľská časť.
         </p>
 
@@ -211,9 +227,12 @@
         </div>
 
         <h2>Gateway Adresy </h2>
-        <p>Dve ďalšie adresy <span class="high">IP</span> pridané do stĺpca IPs, sú vyhradené pre takzvanú sieťovú adresu a adresu
-            vysielania/broadcast. Ďalšiu dôležitú úlohu zohráva predvolená <span class="high">brána/gateway</span>, čo je názov pre adresu <span class="high">IPv4
-                routera</span>, ktorý spája siete a systémy s rôznymi protokolmi a spravuje adresy a spôsoby prenosu. Väčšinu času
+        <p>Dve ďalšie adresy <span class="high">IP</span> pridané do stĺpca IPs, sú vyhradené pre takzvanú sieťovú
+            adresu a adresu
+            vysielania/broadcast. Ďalšiu dôležitú úlohu zohráva predvolená <span class="high">brána/gateway</span>, čo
+            je názov pre adresu <span class="high">IPv4
+                routera</span>, ktorý spája siete a systémy s rôznymi protokolmi a spravuje adresy a spôsoby prenosu.
+            Väčšinu času
             sa ako predvolená brána používa prvá adresa <span class="high">IPv4 podsietí</span>.</p>
 
 
@@ -284,10 +303,14 @@
         </div>
 
         <h2>Broadcast Adresy</h2>
-        <p>Úlohou <span class="high">broadcast IP adresy</span> je vzájomne prepojiť všetky zariadenia v sieti. Broadcast/Vysielane v sieti je
-            správa, ktorá sa prenáša všetkým účastníkom siete a <span class="high">nevyžaduje žiadnu odpoveď</span>. Týmto spôsobom host pošle
-            <span class="high">dátový paket</span> všetkým ostatným účastníkom siete súčasne a tým oznámi svoju <span class="high">IP adresu</span>, ktorú môžu prijímače
-            použiť na kontaktovanie. Toto je posledná adresa v IPv4, ktorá sa používa na <span class="high">broadcast</span>.</p>
+        <p>Úlohou <span class="high">broadcast IP adresy</span> je vzájomne prepojiť všetky zariadenia v sieti.
+            Broadcast/Vysielane v sieti je
+            správa, ktorá sa prenáša všetkým účastníkom siete a <span class="high">nevyžaduje žiadnu odpoveď</span>.
+            Týmto spôsobom host pošle
+            <span class="high">dátový paket</span> všetkým ostatným účastníkom siete súčasne a tým oznámi svoju <span
+                    class="high">IP adresu</span>, ktorú môžu prijímače
+            použiť na kontaktovanie. Toto je posledná adresa v IPv4, ktorá sa používa na <span
+                    class="high">broadcast</span>.</p>
 
         <div class="table-div">
             <table>
@@ -357,11 +380,14 @@
 
 
         <h2>Binárny Systém</h2>
-        <p><span class="high">Binárny systém</span> je číselný systém, ktorý používa iba dva rôzne stavy, ktoré sú reprezentované dvoma číslami (0
+        <p><span class="high">Binárny systém</span> je číselný systém, ktorý používa iba dva rôzne stavy, ktoré sú
+            reprezentované dvoma číslami (0
             a 1) oproti <span class="high">desiatkovej sústave</span> (0 až 9).</p>
 
-        <p> <span class="high">Adresa IPv4</span> je rozdelená na <span class="high">4 oktety</span>, ako sme už videli. Každý oktet pozostáva z <span class="high">8 bitov</span>. Každá pozícia bitu
-            v oktete má špecifickú <span class="high">desatinnú hodnotu</span>. Vezmime si ako príklad nasledujúcu adresu IPv4:</p>
+        <p><span class="high">Adresa IPv4</span> je rozdelená na <span class="high">4 oktety</span>, ako sme už videli.
+            Každý oktet pozostáva z <span class="high">8 bitov</span>. Každá pozícia bitu
+            v oktete má špecifickú <span class="high">desatinnú hodnotu</span>. Vezmime si ako príklad nasledujúcu
+            adresu IPv4:</p>
 
 
         <h5>IPv4 Address: 192.168.10.39</h5>
@@ -386,7 +412,8 @@
         </div>
 
         <p>
-            Ak vypočítame súčet všetkých týchto hodnôt pre každý <span class="high">oktet</span>, kde je bit nastavený na t, dostaneme súčet:
+            Ak vypočítame súčet všetkých týchto hodnôt pre každý <span class="high">oktet</span>, kde je bit nastavený
+            na t, dostaneme súčet:
         </p>
 
 
@@ -547,12 +574,15 @@
         <h5> Maska podsiete: 255.255.255.0</h5>
 
         <h3>CIDR</h3>
-        <p>Classless Inter-Domain Routing (<span class="high">CIDR</span>) je metóda reprezentácie a nahrádza pevné priradenie medzi IPv4 adresou
+        <p>Classless Inter-Domain Routing (<span class="high">CIDR</span>) je metóda reprezentácie a nahrádza pevné
+            priradenie medzi IPv4 adresou
             a
-            triedami siete (<span class="high">A, B, C, D, E</span>). Rozdelenie je založené na maske podsiete alebo takzvanej CIDR suffix, ktorá
+            triedami siete (<span class="high">A, B, C, D, E</span>). Rozdelenie je založené na maske podsiete alebo
+            takzvanej CIDR suffix, ktorá
             umožňuje bitové rozdelenie IPv4 adresného priestoru a teda na podsiete ľubovoľnej veľkosti. Prípona CIDR
             udáva,
-            koľko bitov od začiatku adresy <span class="high">IPv4 patrí sieti</span>. Je to zápis, ktorý predstavuje masku podsiete zadaním počtu
+            koľko bitov od začiatku adresy <span class="high">IPv4 patrí sieti</span>. Je to zápis, ktorý predstavuje
+            masku podsiete zadaním počtu
             1
             bitu v maske podsiete.</p>
 
@@ -599,29 +629,26 @@
         </div>
 
 
-
-
-
     </div>
     <div class="side">
         <div class="sidebar">
-                <h2>Lekcie</h2>
-                <a href="/historia_sieti">Historia Internetu</a>
-                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
-                <a href="/referencny_model" type="submit">Referenčný model</a>
-                <a href="/iso_osi_model">ISO/OSI Model</a>
-                <a href="/tcp_ip_model">TCP/IP Model</a>
-                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
-                <a href="/sietova_vrstva">Sieťová vrstva</a>
-                <a href="/ip_adresy">IP Adresy</a>
-                <a href="/podsiete">Podsiete</a>
-                <a href="/mac_adresy">Adresy MAC</a>
-                <a href="/ipv6_adresy">IPv6 Adresy</a>
-                <a href="/sietove_topologie">Sieťové topológie</a>
-                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
-                <a href="/linkova_vrstva">Linková vrstva</a>
-                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
-                <a href="/protokoly">Protokoly</a>
+            <h2>Lekcie</h2>
+            <a href="/historia_sieti">Historia Internetu</a>
+            <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+            <a href="/referencny_model" type="submit">Referenčný model</a>
+            <a href="/iso_osi_model">ISO/OSI Model</a>
+            <a href="/tcp_ip_model">TCP/IP Model</a>
+            <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+            <a href="/sietova_vrstva">Sieťová vrstva</a>
+            <a href="/ip_adresy">IP Adresy</a>
+            <a href="/podsiete">Podsiete</a>
+            <a href="/mac_adresy">Adresy MAC</a>
+            <a href="/ipv6_adresy">IPv6 Adresy</a>
+            <a href="/sietove_topologie">Sieťové topológie</a>
+            <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+            <a href="/linkova_vrstva">Linková vrstva</a>
+            <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+            <a href="/protokoly">Protokoly</a>
         </div>
 
 
@@ -636,8 +663,8 @@
 
 </div>
 <footer>
-  <p class="footer_lectures">Copyright &copy; learnet.com</p>
- </footer>
+    <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
 
 </body>
 </html>

@@ -29,16 +29,24 @@
 <div class="container">
     <div class="main">
 
+        <h4>Ako vyzerajú IPv6 Adresy, Prečo vznikli IPv6 Adresy. Rozdiel medzi IPv4 a IPv6.
+            Funkcie, Počitanie, Skracovanie. </h4>
+
 
         <p>
-            IPv6 je nástupcom <span class="high">IPv4</span>. Na rozdiel od IPv4 má IPv6 adresa 128 bitov. Na identifikáciu hosta a časti siete sa
-            používa takzvaný prefix. Internet Assigned Numbers Authority (<span class="high">IANA</span>) je zodpovedný za prideľovanie adries
-            IPv4 a IPv6 a ich pridružených častí siete. Z dlhodobého hľadiska sa očakáva, že <span class="high">IPv6</span> úplne nahradí <span class="high">IPv4</span>,
+            IPv6 je nástupcom <span class="high">IPv4</span>. Na rozdiel od IPv4 má IPv6 adresa 128 bitov. Na
+            identifikáciu hosta a časti siete sa
+            používa takzvaný prefix. Internet Assigned Numbers Authority (<span class="high">IANA</span>) je zodpovedný
+            za prideľovanie adries
+            IPv4 a IPv6 a ich pridružených častí siete. Z dlhodobého hľadiska sa očakáva, že <span
+                class="high">IPv6</span> úplne nahradí <span class="high">IPv4</span>,
             ktorý sa v súčasnosti stále používa prevažne na internete. V zásade však môžu byť IPv4 a IPv6 sprístupnené
             súčasne (<span class="high">Dual Stack</span>).</p>
 
-        <p> <span class="high">IPv6</span> dôsledne dodržiava princíp <span class="high">end-to-end</span> a poskytuje verejne prístupné IP adresy pre akékoľvek koncové
-            zariadenia bez potreby <span class="high">NAT</span>. V dôsledku toho môže mať rozhranie viacero adries IPv6 a existujú špeciálne
+        <p><span class="high">IPv6</span> dôsledne dodržiava princíp <span class="high">end-to-end</span> a poskytuje
+            verejne prístupné IP adresy pre akékoľvek koncové
+            zariadenia bez potreby <span class="high">NAT</span>. V dôsledku toho môže mať rozhranie viacero adries IPv6
+            a existujú špeciálne
             adresy IPv6, ku ktorým je priradených viacero rozhraní.</p>
 
         <p> IPv6 je protokol s mnohými novými funkciami, ktorý má oproti IPv4 aj mnoho ďalších výhod:</p>
@@ -127,9 +135,12 @@
             </table>
         </div>
 
-        <p><span class="high">Hexadecimálny systém</span> (<span class="high">hex</span>) sa používa na to, aby bola <span class="high">binárna reprezentácia</span> čitateľnejšia a zrozumiteľnejšia.
-            Pomocou jediného znaku môžeme zobraziť iba 10 (<span class="high">0-9</span>) stavov v <span class="high">desiatkovej sústave</span> a 2 (0 / 1) v dvojkovej
-            sústave. Na rozdiel od dvojkovej a <span class="high">desiatkovej sústavy</span> môžeme použiť <span class="high">šestnástkovú sústavu</span> na zobrazenie 16
+        <p><span class="high">Hexadecimálny systém</span> (<span class="high">hex</span>) sa používa na to, aby bola
+            <span class="high">binárna reprezentácia</span> čitateľnejšia a zrozumiteľnejšia.
+            Pomocou jediného znaku môžeme zobraziť iba 10 (<span class="high">0-9</span>) stavov v <span class="high">desiatkovej sústave</span>
+            a 2 (0 / 1) v dvojkovej
+            sústave. Na rozdiel od dvojkovej a <span class="high">desiatkovej sústavy</span> môžeme použiť <span
+                    class="high">šestnástkovú sústavu</span> na zobrazenie 16
             (<span class="high">0-F</span>) stavov s jedným znakom.</p>
 
         <div class="table-div">
@@ -254,10 +265,13 @@
             </table>
         </div>
 
-        <p> <span class="high">Adresa IPv6</span> je kvôli svojej dĺžke reprezentovaná v šestnástkovej sústave. Preto je 128 bitov rozdelených na
+        <p><span class="high">Adresa IPv6</span> je kvôli svojej dĺžke reprezentovaná v šestnástkovej sústave. Preto je
+            128 bitov rozdelených na
             8
-            blokov krát 16 bitov (alebo 4 hexadecimálne čísla). Všetky 4 <span class="high">hexadecimálne čísla</span> sú zoskupené a oddelené
-            dvojbodkou (:) namiesto jednoduchej bodky (.) ako v <span class="high">IPv4</span>. Pre zjednodušenie zápisu vynecháme v blokoch
+            blokov krát 16 bitov (alebo 4 hexadecimálne čísla). Všetky 4 <span class="high">hexadecimálne čísla</span>
+            sú zoskupené a oddelené
+            dvojbodkou (:) namiesto jednoduchej bodky (.) ako v <span class="high">IPv4</span>. Pre zjednodušenie zápisu
+            vynecháme v blokoch
             úvodné
             aspoň 4 nuly a môžeme ich nahradiť dvomi dvojbodkami (::).</p>
 
@@ -271,42 +285,46 @@
         <h5> • Prefix siete (sieťová časť)</h5>
         <h5> • Identifikátor rozhrania nazývaný aj prípona (hostová časť)</h5>
 
-        <p>Prefix siete identifikuje sieť, podsieť alebo rozsah adries. <span class="high">Identifikátor</span> rozhrania je tvorený 48-bitovou
+        <p>Prefix siete identifikuje sieť, podsieť alebo rozsah adries. <span class="high">Identifikátor</span>
+            rozhrania je tvorený 48-bitovou
             <span class="high">MAC
-                adresou</span> (o ktorej si povieme trochu neskôr) rozhrania a v procese je konvertovaný na <span class="high">64-bitovú adresu</span>.
-            Predvolená dĺžka predpony je <span class="high">/64</span>. Iné typické predpony sú však <span class="high">/32</span>, <span class="high">/48</span> a <span class="high">/56</span>. Ak chceme využívať naše
+                adresou</span> (o ktorej si povieme trochu neskôr) rozhrania a v procese je konvertovaný na <span
+                    class="high">64-bitovú adresu</span>.
+            Predvolená dĺžka predpony je <span class="high">/64</span>. Iné typické predpony sú však <span class="high">/32</span>,
+            <span class="high">/48</span> a <span class="high">/56</span>. Ak chceme využívať naše
             siete,
             dostaneme od nášho poskytovateľa kratší prefix (napr. /56) ako /64.</p>
 
-        <p>V <span class="high">RFC 5952</span> bol definovaný vyššie uvedený zápis adresy <span class="high">IPv6</span>:</p>
+        <p>V <span class="high">RFC 5952</span> bol definovaný vyššie uvedený zápis adresy <span
+                class="high">IPv6</span>:</p>
 
         <p> • Všetky <span class="high">abecedné znaky</span> sú vždy písané malými písmenami.</p>
         <p> • Všetky úvodné nuly <span class="high">bloku</span> sú vždy vynechané.</p>
-        <p> • Jeden alebo viac po sebe <span class="high">idúcich blokov</span> so 4 nulami (hex) sa skráti dvoma dvojbodkami (::).</p>
+        <p> • Jeden alebo viac po sebe <span class="high">idúcich blokov</span> so 4 nulami (hex) sa skráti dvoma
+            dvojbodkami (::).</p>
         <p> • Skrátenie na dve dvojbodky (::) je možné vykonať iba raz zľava.</p>
-
 
 
     </div>
     <div class="side">
         <div class="sidebar">
-                <h2>Lekcie</h2>
-                <a href="/historia_sieti">Historia Internetu</a>
-                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
-                <a href="/referencny_model" type="submit">Referenčný model</a>
-                <a href="/iso_osi_model">ISO/OSI Model</a>
-                <a href="/tcp_ip_model">TCP/IP Model</a>
-                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
-                <a href="/sietova_vrstva">Sieťová vrstva</a>
-                <a href="/ip_adresy">IP Adresy</a>
-                <a href="/podsiete">Podsiete</a>
-                <a href="/mac_adresy">Adresy MAC</a>
-                <a href="/ipv6_adresy">IPv6 Adresy</a>
-                <a href="/sietove_topologie">Sieťové topológie</a>
-                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
-                <a href="/linkova_vrstva">Linková vrstva</a>
-                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
-                <a href="/protokoly">Protokoly</a>
+            <h2>Lekcie</h2>
+            <a href="/historia_sieti">Historia Internetu</a>
+            <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+            <a href="/referencny_model" type="submit">Referenčný model</a>
+            <a href="/iso_osi_model">ISO/OSI Model</a>
+            <a href="/tcp_ip_model">TCP/IP Model</a>
+            <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+            <a href="/sietova_vrstva">Sieťová vrstva</a>
+            <a href="/ip_adresy">IP Adresy</a>
+            <a href="/podsiete">Podsiete</a>
+            <a href="/mac_adresy">Adresy MAC</a>
+            <a href="/ipv6_adresy">IPv6 Adresy</a>
+            <a href="/sietove_topologie">Sieťové topológie</a>
+            <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+            <a href="/linkova_vrstva">Linková vrstva</a>
+            <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+            <a href="/protokoly">Protokoly</a>
 
         </div>
 
@@ -322,7 +340,7 @@
 </div>
 
 <footer>
-  <p class="footer_lectures">Copyright &copy; learnet.com</p>
- </footer>
+    <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
 </body>
 </html>

@@ -28,7 +28,7 @@
 
 <div class="container">
     <div class="main">
-
+        <h4>čo je to protokol, Aké existujú protokoly. Rozdelenie protokolov do jednotlivých vrstiev.</h4>
 
         <p>V sieti je protokol súbor pravidiel pre formátovanie a spracovanie údajov. Sieťové protokoly sú ako spoločný
             jazyk pre počítače. Počítače v sieti môžu používať úplne odlišný <span class="high">softvér a hardvér</span>.
@@ -82,29 +82,37 @@
 
         <p>IGMP: Protokol <span class="high">IGMP</span> (<span class="high">Internet Group Management Protocol</span>)
             nastavuje sieťové pripojenia typu one-to-many. IGMP
-            pomáha nastaviť <span class="high">multicasting</span>, čo znamená, že viac počítačov môže prijímať <span class="high">dátové pakety</span> smerované na jednu
+            pomáha nastaviť <span class="high">multicasting</span>, čo znamená, že viac počítačov môže prijímať <span
+                    class="high">dátové pakety</span> smerované na jednu
             IP
             adresu.</p>
 
         <h2>Internetové protokoly</h2>
 
-        <p><span class="high">TCP</span>: Ako je uvedené vyššie, TCP je protokol transportnej vrstvy, ktorý zabezpečuje spoľahlivé doručovanie
+        <p><span class="high">TCP</span>: Ako je uvedené vyššie, TCP je protokol transportnej vrstvy, ktorý zabezpečuje
+            spoľahlivé doručovanie
             údajov. TCP je určený na použitie s IP. Tieto dva protokoly sa často spoločne označujú ako TCP/IP.</p>
 
-        <p><span class="high">HTTP</span>: Hypertext Transfer Protocol (HTTP) je základom <span class="high">World Wide Web</span>, internetu, s ktorým komunikuje väčšina
-            používateľov. Používa sa na prenos údajov medzi zariadeniami. <span class="high">HTTP</span> patrí do aplikačnej vrstvy (vrstva 7),
+        <p><span class="high">HTTP</span>: Hypertext Transfer Protocol (HTTP) je základom <span class="high">World Wide Web</span>,
+            internetu, s ktorým komunikuje väčšina
+            používateľov. Používa sa na prenos údajov medzi zariadeniami. <span class="high">HTTP</span> patrí do
+            aplikačnej vrstvy (vrstva 7),
             pretože vkladá údaje do formátu, ktorý môžu aplikácie (napr. prehliadač) používať priamo bez ďalšej
-            <span class="high">interpretácie</span>. Spodné vrstvy modelu <span class="high">OSI</span> má na starosti operačný systém počítača, nie aplikácie.</p>
+            <span class="high">interpretácie</span>. Spodné vrstvy modelu <span class="high">OSI</span> má na starosti
+            operačný systém počítača, nie aplikácie.</p>
 
-        <p><span class="high">HTTPS</span>: Problém s HTTP je, že nie je zašifrovaný — každý útočník, ktorý zachytí správu HTTP, si ju môže
+        <p><span class="high">HTTPS</span>: Problém s HTTP je, že nie je zašifrovaný — každý útočník, ktorý zachytí
+            správu HTTP, si ju môže
             prečítať.
-           <span class="high"> HTTPS </span>(HTTP Secure) to opravuje šifrovaním správ HTTP.</p>
+            <span class="high"> HTTPS </span>(HTTP Secure) to opravuje šifrovaním správ HTTP.</p>
 
-        <p><span class="high">TLS/SSL</span>: Transport Layer Security (TLS) je protokol, ktorý HTTPS používa na šifrovanie. Protokol TLS sa
+        <p><span class="high">TLS/SSL</span>: Transport Layer Security (TLS) je protokol, ktorý HTTPS používa na
+            šifrovanie. Protokol TLS sa
             kedysi
             nazýval <span class="high">Secure Sockets Layer</span> (<span class="high">SSL</span>).</p>
 
-        <p><span class="high">UDP</span>: <span class="high">User Datagram Protocol</span> (<span class="high">UDP</span>) je rýchlejšia, ale menej spoľahlivá alternatíva k TCP na transportnej
+        <p><span class="high">UDP</span>: <span class="high">User Datagram Protocol</span> (<span
+                class="high">UDP</span>) je rýchlejšia, ale menej spoľahlivá alternatíva k TCP na transportnej
             vrstve.
             Často sa používa v službách, ako je streamovanie videa a hranie hier, kde je rýchle dodávanie dát
             prvoradé.</p>
@@ -115,41 +123,47 @@
             protokoly
             sa nepoužívajú na prenos používateľských údajov. Medzi dôležité sieťové smerovacie protokoly patria:</p>
 
-        <p><span class="high">BGP</span>: Border Gateway Protocol (BGP) je protokol aplikačnej vrstvy, ktorý siete používajú na vysielanie adries
+        <p><span class="high">BGP</span>: Border Gateway Protocol (BGP) je protokol aplikačnej vrstvy, ktorý siete
+            používajú na vysielanie adries
             IP,
             ktoré riadia. Tieto informácie umožňujú smerovačom rozhodnúť sa, cez ktoré siete by mali dátové pakety
             prechádzať na ceste do svojich cieľov.</p>
 
-        <p><span class="high">EIGRP</span>: Protokol <span class="high">EIGRP</span> (Enhanced Interior Gateway Routing Protocol) identifikuje vzdialenosti medzi<span class="high"> routermi</span>.
-            <span class="high">EIGRP</span> automaticky aktualizuje záznamy o najlepších trasách každého <span class="high">routera</span> (nazývané smerovacia tabuľka) a
-            vysiela tieto aktualizácie do iných <span class="high">smerovačov</span> v <span class="high">sieti</span>.</p>
+        <p><span class="high">EIGRP</span>: Protokol <span class="high">EIGRP</span> (Enhanced Interior Gateway Routing
+            Protocol) identifikuje vzdialenosti medzi<span class="high"> routermi</span>.
+            <span class="high">EIGRP</span> automaticky aktualizuje záznamy o najlepších trasách každého <span
+                    class="high">routera</span> (nazývané smerovacia tabuľka) a
+            vysiela tieto aktualizácie do iných <span class="high">smerovačov</span> v <span class="high">sieti</span>.
+        </p>
 
-        <p><span class="high">OSPF</span>: Protokol OSPF (Open Shortest Path First) vypočítava najefektívnejšie <span class="high">sieťové trasy</span> na základe rôznych
+        <p><span class="high">OSPF</span>: Protokol OSPF (Open Shortest Path First) vypočítava najefektívnejšie <span
+                class="high">sieťové trasy</span> na základe rôznych
             faktorov vrátane vzdialenosti a šírky pásma.</p>
 
-        <p><span class="high">RIP</span>: Routing Information Protocol (<span class="high">RIP</span>) je starší <span class="high">smerovací protokol</span>, ktorý identifikuje vzdialenosti medzi
+        <p><span class="high">RIP</span>: Routing Information Protocol (<span class="high">RIP</span>) je starší <span
+                class="high">smerovací protokol</span>, ktorý identifikuje vzdialenosti medzi
             smerovačmi. RIP je protokol aplikačnej vrstvy.</p>
 
     </div>
     <div class="side">
         <div class="sidebar">
-                <h2>Lekcie</h2>
-                <a href="/historia_sieti">Historia Internetu</a>
-                <a href="/pocitacove_siete" type="submit">Typy sietí</a>
-                <a href="/referencny_model" type="submit">Referenčný model</a>
-                <a href="/iso_osi_model">ISO/OSI Model</a>
-                <a href="/tcp_ip_model">TCP/IP Model</a>
-                <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
-                <a href="/sietova_vrstva">Sieťová vrstva</a>
-                <a href="/ip_adresy">IP Adresy</a>
-                <a href="/podsiete">Podsiete</a>
-                <a href="/mac_adresy">Adresy MAC</a>
-                <a href="/ipv6_adresy">IPv6 Adresy</a>
-                <a href="/sietove_topologie">Sieťové topológie</a>
-                <a href="/sietove_komponenty">Základné sieťové komponenty</a>
-                <a href="/linkova_vrstva">Linková vrstva</a>
-                <a href="/fyzicka_vrstva">Fyzická vrstva</a>
-                <a href="/protokoly">Protokoly</a>
+            <h2>Lekcie</h2>
+            <a href="/historia_sieti">Historia Internetu</a>
+            <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+            <a href="/referencny_model" type="submit">Referenčný model</a>
+            <a href="/iso_osi_model">ISO/OSI Model</a>
+            <a href="/tcp_ip_model">TCP/IP Model</a>
+            <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+            <a href="/sietova_vrstva">Sieťová vrstva</a>
+            <a href="/ip_adresy">IP Adresy</a>
+            <a href="/podsiete">Podsiete</a>
+            <a href="/mac_adresy">Adresy MAC</a>
+            <a href="/ipv6_adresy">IPv6 Adresy</a>
+            <a href="/sietove_topologie">Sieťové topológie</a>
+            <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+            <a href="/linkova_vrstva">Linková vrstva</a>
+            <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+            <a href="/protokoly">Protokoly</a>
 
         </div>
 
@@ -157,7 +171,8 @@
         <div class="under_sidebar">
             <h2>Zdroje</h2>
             <a href="https://www.youtube.com/watch?v=BnWn18qUYyA"> • čo je protokol ? </a></br>
-            <a href="https://www.manageengine.com/network-monitoring/network-protocols.html"> • dalšie protokoly </a></br>
+            <a href="https://www.manageengine.com/network-monitoring/network-protocols.html"> • dalšie
+                protokoly </a></br>
 
         </div>
     </div>
@@ -166,7 +181,7 @@
 </div>
 
 <footer>
-  <p class="footer_lectures">Copyright &copy; learnet.com</p>
- </footer>
+    <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
 </body>
 </html>
