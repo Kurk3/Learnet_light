@@ -6,6 +6,15 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("before_login/homepage.html")
 
+@views.route('/navod', methods=['GET', 'POST'])
+def navod():
+    return render_template("after_login/navod.html")
+
+@views.route('/koniec', methods=['GET', 'POST'])
+def zaver():
+    return render_template("lectures/zaver.html")
+
+
 @views.route('/homepage', methods=['GET', 'POST'])
 def homepage():
     return render_template("after_login/home.html")

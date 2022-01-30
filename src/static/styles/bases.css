@@ -375,8 +375,7 @@ line {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  margin: 0 0 20px;
-  margin: 3rem;
+  margin: 0.5rem;
 }
 
 .form-group input {
