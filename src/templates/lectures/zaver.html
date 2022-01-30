@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/src/static/styles/bases.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bases.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learnet</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+
+<body class="background">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+        <li><a href='/lectures'>Lekcie</a></li>
+        <li><a href='/homepage'>Domov</a></li>
+        <li><a href='/navod'>Návod</a></li>
+    </ul>
+</nav>
+
+<h1 class="specific_heading_lectures">Pokračovanie</h1>
+<line></line>
+
+
+<div class="container">
+    <div class="main">
+
+        <p>Ak si osvojil všetky veci ktoré táto stránka obsahuje mal by si mať zakladaný prehlad o tom, ako
+            fungujú siete a internet. Pokiaľ ťa to chytilo a chcel by si sa tom naďalej venovať tu je list stránok na
+            ktorých si dokážeš
+            interaktívne skúšať napr. konfiguráciu servera prácu s Linuxom, alebo hackovanie.</p>
+
+        <h5>• TryHackMe</h5>
+        <h5>• HackTheBox</h5>
+        <h5>• CoHackers</h5>
+        <h5>• LetsDefend</h5>
+        <h5>...</h5>
+
+        <p>Tieto stránky sú konštruované tak aby ťa interaktívne naučili základy kybernetickej bezpečnosti taktiež sa
+            naučíš pracovať s príkazovými riadkami.(ako sa orientovať v systéme komunikácia s kernelom, úprava súborov ...)</p>
+
+
+        <p>Ak si rozhodnutí, že si túto cestu vyskúšaš tak vela štastia!</p>
+
+
+
+    </div>
+    <div class="side">
+        <div class="sidebar">
+            <h2>Lekcie</h2>
+            <a href="/historia_sieti">Historia Internetu</a>
+            <a href="/pocitacove_siete" type="submit">Typy sietí</a>
+            <a href="/referencny_model" type="submit">Referenčný model</a>
+            <a href="/iso_osi_model">ISO/OSI Model</a>
+            <a href="/tcp_ip_model">TCP/IP Model</a>
+            <a href="/osi_vs_tcp_ip_packet_transfer">TCP/IP vs ISO a Prenos Paketov</a>
+            <a href="/sietova_vrstva">Sieťová vrstva</a>
+            <a href="/ip_adresy">IP Adresy</a>
+            <a href="/podsiete">Podsiete</a>
+            <a href="/mac_adresy">Adresy MAC</a>
+            <a href="/ipv6_adresy">IPv6 Adresy</a>
+            <a href="/sietove_topologie">Sieťové topológie</a>
+            <a href="/sietove_komponenty">Základné sieťové komponenty</a>
+            <a href="/linkova_vrstva">Linková vrstva</a>
+            <a href="/fyzicka_vrstva">Fyzická vrstva</a>
+            <a href="/protokoly">Protokoly</a>
+        </div>
+
+
+        <div class="under_sidebar">
+            <h2>Zdroje</h2>
+            <a href="https://tryhackme.com/"> • TryHackMe</a></br>
+            <a href="https://www.hackthebox.com/"> • HackTheBox </a></br>
+            <a href="https://cohackers.co/"> • CoHackers </a></br>
+            <a href="https://letsdefend.io/"> • LetsDefend </a></br>
+            <a href="https://www.google.com/"> • ... </a></br>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p class="footer_lectures">Copyright &copy; learnet.com</p>
+</footer>
+
+</body>
+</html>

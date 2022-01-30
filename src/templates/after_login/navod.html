@@ -1,0 +1,40 @@
+{% extends "base_templates/new_home.html" %} {% block title %}Home{% endblock %} {% block content %}
+
+    <br>
+    <p class="main_heading_home_page">Návod</p>
+    <p class="underheading_homepage">návod k použitiu tejto stránky</p>
+    <line></line>
+
+    <div class="div_text_container_homepage">
+        <p class="text_heading_in_text_homepage"> Ako postupovať pri učení lekcií.</p>
+
+        <p class="text_in_container_homepage">Učiť sa niečo sám môže byť niekedy veľmi namáhavé, a preto si vždy treba
+            vytvoriť nejaký systém pre lepšie zapamätanie informácií keďže v tomto prípade len pasívne čítanie
+            nestačí. Preto buď použi tento alebo si vymysli nejaký vlastný s podobným princípom.</p>
+
+        <p class="text_heading_in_text_homepage">Postup:</p>
+        <p class="text_in_container_homepage">
+            1.Prečítaj si lekciu <br>
+            2.Niekde si napíš čo všetko si z toho pochopil (svojimi slovami)<br>
+            3.Pozri si videá ktoré su linknuté v zdrojoch (pre pochopenie princípov a terminológie).<br>
+            4.Ak chápeš princípu toho, ako to funguje v jednoduchosti si ho zápíš a presuň sa na ďalšiu lekciu.
+        </p>
+
+        <p class="text_heading_in_text_homepage">Máš problém so sústredením?</p>
+        <p class="text_in_container_homepage"> Zo začiatku sú veci aj zábavného charakteru veľmi frustrujúce,
+            a preto od nich odchádzame a nedokážeme sa na ne sústrediť. Toto čiastočne rieši technika pomodoro ktorú
+            vymysleli v Japonsku
+            jedná sa o časovač ktorý je nadstavený tak že je v intervale 25min a 5min (25 min sa učí a 5 min
+            pauzuje)<br>
+            Tento časovač sa nachádza napr na stránke pomofocus.io<br>
+            Je to jednoduché nadstavíš si dĺžku práce a dĺžku prestávky a už len vydržať...
+        </p>
+        <br></br>
+        <form>
+            <div class="form-group">
+                <button formaction="/lectures">pokračovať</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
